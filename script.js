@@ -388,6 +388,352 @@ var codes = [
         end`,
         language: "lua",
         src: "https://github.com/Rabios/TARGET/blob/master/utils.lua"
+    },
+
+    {
+        code: `
+        package pancake;
+
+        import haxe.Constraints.Function;
+        
+        /**
+         * ...
+         * @author Rabia Haffar
+         */
+        @:native("navigator.app")
+        extern class NavigatorApp {
+            public static function exitApp(): Void;
+        }
+        
+        @:native("navigator.device")
+        extern class NavigatorDevice {
+            public static function exitApp(): Void;
+        }
+        
+        @:native("nw")
+        extern class NWJS {}
+        
+        @:native("nw.Window")
+        extern class NWJSWindow {
+            public static function get(): NWJS_Window_Props;
+        }
+        
+        @:native("nw.Window.get()")
+        extern class NWJS_Window_Props {
+            public function enterFullscreen(): Void;
+            public function toggleFullscreen(): Void;
+            public function leaveFullscreen(): Void;
+        }
+        
+        @:native("window")
+        extern class Window {
+            public static function require(module: String): Dynamic;
+            public static var onmspointerup: haxe.Constraints.Function;
+            public static var onmspointerdown: haxe.Constraints.Function;
+            public static var onmspointermove: haxe.Constraints.Function;
+        }
+        
+        @:native("window.require('electron').remote.getCurrentWindow()")
+        extern class ElectronWindow {
+            public static function setFullScreen(fullscreen: Bool): Void;
+            public static function setMenuBarVisibility(visible: Bool): Void;
+        }
+        
+        @:native("window.Windows")
+        extern class Windows {}
+        
+        @:native("window.Windows.Gaming.Input.Gamepad")
+        extern class UWPGamepadInput {
+            public static var gamepads: Array<UWPGamepad>;
+        }
+        
+        extern class UWPGamepad {
+            public function getCurrentReading(): UWPGamepadState;
+        }
+        
+        @:native("window.Windows.UI.ViewManagement.ApplicationView.getForCurrentView()")
+        extern class UWPCurrentView {
+            public static var title: String;
+            public static var isFullScreen: Bool;
+            public static var isFullScreenMode: Bool;
+            public static var fullScreenSystemOverlayMode: Int;
+            public static function tryEnterFullScreenMode(): Bool;
+            public static function exitFullScreenMode(): Void;
+        }
+        
+        @:native("window.Windows.UI.ViewManagement.ApplicationViewWindowingMode")
+        extern class UWPWindowingModes {
+            public static var fullscreen: Int;
+            public static var auto: Int;
+            public static var preferredLaunchViewSize: Int;
+        }
+        
+        @:native("window.Windows.Gaming.Input.GamepadButtons")
+        extern class UWPGamepadButtons {
+            public static var a: Int;
+            public static var b: Int;
+            public static var x: Int;
+            public static var y: Int;
+            public static var dpadUp: Int;
+            public static var dpadDown: Int;
+            public static var dpadLeft: Int;
+            public static var dpadRight: Int;
+            public static var leftShoulder: Int;
+            public static var rightShoulder: Int;
+            public static var view: Int;
+            public static var menu: Int;
+            public static var leftThumbstick: Int;
+            public static var rightThumbstick: Int;
+        }
+        
+        extern class UWPGamepadState {
+            public var buttons: Int;
+            public var leftThumbstickX: Float;
+            public var leftThumbstickY: Float;
+            public var rightThumbstickX: Float;
+            public var rightThumbstickY: Float;
+            public var leftTrigger: Float;
+            public var rightTrigger: Float;
+            public var timestamp: Float;
+        }`,
+        language: "haxe",
+        src: "https://github.com/Rabios/Pancake.hx/blob/master/src/pancake/Native.hx"
+    },
+
+    {
+      code: `
+      void draw_texture(char* src, rect srcRec, rect dstRec, color tint) {
+        printf("GAME: LOADING TEXTURE %s", src);
+      
+        GLuint texture;
+        int width, height, nrChannels;
+        unsigned char* data = stbi_load(src, &width, &height, &nrChannels, STBI_rgb_alpha);
+        if (data) {
+            glEnable(GL_TEXTURE_2D);
+            glEnable(GL_BLEND);
+            glGenTextures(1, &texture);
+            glBindTexture(GL_TEXTURE_2D, texture);
+            glActiveTexture(GL_TEXTURE0);
+    
+            glColor4f(tint.r, tint.g, tint.b, tint.a);
+            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
+            glBlendFunc(GL_ONE, GL_ONE_MINUS_DST_ALPHA);
+            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+            glGenerateMipmap(GL_TEXTURE_2D);
+    
+            if (!srcRec.w) srcRec.w = (float) width;
+            if (!srcRec.h) srcRec.h = (float)height;
+            if (!dstRec.w) dstRec.w = (float) width;
+            if (!dstRec.h) dstRec.h = (float) height;
+    
+            float ix1 = (float) srcRec.x / width;
+            float ix2 = (float) (srcRec.w + srcRec.x) / width;
+            float iy1 = (float) srcRec.y / height;
+            float iy2 = (float) (srcRec.h + srcRec.y) / height;
+    
+            glBegin(GL_QUADS);
+            glTexCoord2f(ix1, iy1);
+            glVertex2i(dstRec.x, dstRec.y);
+            glTexCoord2f(ix2, iy1);
+            glVertex2i(dstRec.x + dstRec.w, dstRec.y);
+            glTexCoord2f(ix2, iy2);
+            glVertex2i(dstRec.x + dstRec.w, dstRec.y + dstRec.h);
+            glTexCoord2f(ix1, iy2);
+            glVertex2i(dstRec.x, dstRec.y + dstRec.h);
+            glEnd();
+    
+            glBindTexture(GL_TEXTURE_2D, 0);
+            glDeleteTextures(1, &texture);
+            glDisable(GL_TEXTURE_2D);
+            glDisable(GL_BLEND);
+    
+            printf("GAME: UNLOADING TEXTURE %s", src);
+            stbi_image_free(data);
+        } else {
+            printf("GAME: FAILED TO LOAD TEXTURE %s!", src);
+        }
+    }`,
+      language: "c",
+      src: "https://github.com/Rabios/c99-game-template/blob/main/src/main.c"
+    },
+
+    {
+      code: `
+      //////////////////////////////////////////////////////////////////////////////////////
+      // Loop: Where game loop lies
+      //////////////////////////////////////////////////////////////////////////////////////
+      void loop(int argc, char** argv) {
+          while (!glfwWindowShouldClose(window)) {
+              RunPhysicsStep();
+      
+              for (int i = 0; i < 16; i++) {
+                  joysticks[i].name = glfwGetJoystickName(joysticks[i].index);
+                  joysticks[i].buttons = glfwGetJoystickButtons(joysticks[i].index, &joysticks[i].buttons_count);
+                  joysticks[i].axes = glfwGetJoystickAxes(joysticks[i].index, &joysticks[i].axes_count);
+                  joysticks[i].hats = glfwGetJoystickHats(joysticks[i].index, &joysticks[i].hats_count);
+              }
+      
+              /*
+              if (window_fullscreen) {
+                  glfwSetWindowMonitor(window, window_fullscreen ? glfwGetPrimaryMonitor() : NULL, 0, 0, glfw_window_width, glfw_window_height, GLFW_REFRESH_RATE);
+              } else {
+                  glfwSetWindowMonitor(window, NULL, glfw_window_x, glfw_window_y, glfw_window_width, glfw_window_height, GLFW_DONT_CARE);
+              }
+              */
+      
+              if (window_fullscreen) glfwSetWindowMonitor(window, window_fullscreen ? glfwGetPrimaryMonitor() : NULL, 0, 0, glfw_window_width, glfw_window_height, GLFW_REFRESH_RATE);
+      
+              glfwGetFramebufferSize(window, &window_height, &window_height);
+      
+              t2 = glfwGetTime();
+              dt = t2 - t1;
+      
+              if (dt >= (1.0 / game_fps)) {
+                  printf("GAME: UPDATING...");
+                  update(argc, &argv);
+                  printf("GAME: RECEIEVING GAME INPUT...");
+                  input(argc, &argv);
+                  t1 = t2;
+              }
+      
+              printf("GAME: RENDERING...");
+              glViewport(0, 0, window_width, window_height);
+              glMatrixMode(GL_MODELVIEW);
+              glLoadIdentity();
+              glOrtho(0, window_width, 0, window_height, -1, 1);
+              glScalef(1, -1, 1);
+              glTranslatef(0, -window_height, 0);
+      
+              draw(argc, &argv);
+              glfwSwapBuffers(window);
+              glfwPollEvents();
+          }
+          printf("GAME: CLOSING DISPLAY WINDOW...");
+          close(argc, &argv);
+          glfwDestroyWindow(window);
+          glfwTerminate();
+          ma_engine_uninit(&audio_engine);
+          ClosePhysics();
+          enet_deinitialize();
+          printf("GAME: CLOSED SUCCESSFULLY!");
+          exit(0);
+      }`,
+      language: "c",
+      src: "https://github.com/Rabios/c99-game-template/blob/main/src/main.c"
+    },
+
+    {
+      code: `
+      //////////////////////////////////////////////////////////////////////////////////////
+      // Initialization: This holds creation of game window and assigns callbacks
+      //////////////////////////////////////////////////////////////////////////////////////
+      int main(int argc, char** argv) {
+        init(argc, &argv);
+        start(argc, &argv);
+        return 0;
+      }
+      
+      void start(int argc, char** argv) {
+        //////////////////////////////////////////////////////////////////////////////////
+        // Networking Initialization (enet.h)
+        //////////////////////////////////////////////////////////////////////////////////
+        if (enet_initialize() == 0) {
+            printf("GAME: NETWORKING INITIALIZED SUCCESSFULLY!");
+        }
+    
+    
+        //////////////////////////////////////////////////////////////////////////////////
+        // Physics Initialization (physac.h)
+        //////////////////////////////////////////////////////////////////////////////////
+        InitPhysics();
+    
+    
+        //////////////////////////////////////////////////////////////////////////////////
+        // Audio Initialization (miniaudio.h)
+        //////////////////////////////////////////////////////////////////////////////////
+        printf("GAME: INITIALIZING AUDIO ENGINE...");
+    
+        audio_engine_init_result = ma_engine_init(NULL, &audio_engine);
+        if (audio_engine_init_result != MA_SUCCESS) {
+            printf("GAME: AUDIO ENGINE INITIALIZATION FAILED!");
+            return -1;
+        }
+    
+        printf("GAME: AUDIO ENGINE INITIALIZED SUCCESSFULLY!");
+    
+    
+        //////////////////////////////////////////////////////////////////////////////////
+        // Window + OpenGL Initialization
+        //////////////////////////////////////////////////////////////////////////////////
+    #ifdef WINDOW_FULLSCREEN
+        window_fullscreen = true;
+    #endif
+        printf("GAME: STARTING...");
+        glfwSetErrorCallback(error);
+        if (glfwInit()) {
+            t1 = glfwGetTime();
+            t2 = 0;
+            dt = 0;
+    
+            printf("GAME: CREATING DISPLAY WINDOW...");
+    #ifdef ANTIALIASING_ENABLED
+            printf("GAME: ANTIALIASING ENABLED!");
+            glfwWindowHint(GLFW_SAMPLES, ANTIALIASING_SAMPLES);
+    #endif
+    #ifdef __APPLE__
+            glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+            glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 2);
+            glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+            glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    #endif
+            window = glfwCreateWindow(window_width, window_height, window_title, window_fullscreen ? glfwGetPrimaryMonitor() : NULL, NULL);
+    #ifndef WINDOW_RESIZABLE
+            glfwSetWindowAttrib(window, GLFW_RESIZABLE, GLFW_FALSE);
+    #endif
+            if (!window) {
+                printf("GAME: FAILED TO CREATE DISPLAY WINDOW!");
+                glfwTerminate();
+                exit(error_code);
+            }
+            printf("GAME: DISPLAY WINDOW CREATED SUCCESSFULLY!");
+            glfwSetKeyCallback(window, keyboard);
+            glfwSetMouseButtonCallback(window, mouse);
+            glfwSetCursorPosCallback(window, cursor);
+            glfwSetDropCallback(window, file_drop);
+    #ifdef WINDOW_RESIZABLE
+            glfwSetWindowSizeCallback(window, window_resize);
+    #endif
+            glfwGetWindowPos(window, &glfw_window_x, &glfw_window_y);
+            glfwGetWindowSize(window, &glfw_window_width, &glfw_window_height);
+            for (int i = 0; i < 16; i++) {
+                joysticks[i].index = i;
+            }
+    #ifdef VSYNC_ENABLED
+            glfwSwapInterval(1);
+    #else
+            glfwSwapInterval(0);
+    #endif
+      glfwMakeContextCurrent(window);
+    #ifdef _WIN32 || WIN32
+            gladLoadGL(glfwGetProcAddress);
+    #else
+            gladLoadGL();	    
+    #endif
+            printf("%s%s", "GAME: USED OPENGL ", glGetString(GL_VERSION));
+            loop(argc, &argv);
+        }
+        else {
+            printf("GAME: FAILED TO CREATE DISPLAY WINDOW!");
+            glfwTerminate();
+            exit(error_code);
+        }
+    }`,
+    language: "c",
+    src: "https://github.com/Rabios/c99-game-template/blob/main/src/main.c"
     }
 ];
 
