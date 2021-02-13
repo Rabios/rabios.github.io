@@ -33,7 +33,13 @@ var projects = [
         name: "Telvisionation",
         description: "Archive of my old and deleted projects",
         url: "https://github.com/steria773-archive"
-    }
+    },
+
+    {
+        name: "Pancake",
+        description: "Tiny, Fast, and awesome HTML5 game framework!",
+        url: "https://github.com/Rabios/Pancake"
+    },
 ];
 
 function project_info(i) {
