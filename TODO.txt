@@ -1,0 +1,4 @@
+[ ] Edit stuff
+[ ] New background animation
+[ ] Add new blog
+[ ] Update website
