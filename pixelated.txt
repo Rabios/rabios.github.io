@@ -1,6 +1,6 @@
 ___________________________________________
 Pixelated - created by Affinity and Epsilon
-¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯
 
 Thanks for downloading the Pixelated font!
 
@@ -18,12 +18,12 @@ galacticfed.org
 
 ____________
 !!! NOTE !!!
-¯¯¯¯¯¯¯¯¯¯¯¯
+Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯
 This is the first version of our font! Please report and bugs or idea for improvement to the above email address.
 
 ________________
 INSTALLING FONTS
-¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯
   There's a couple of ways to install Fonts. The 'easy' way to
 install fonts is to just Unzip/place the font file(s) into your
 Windows\Fonts directory (I always use this method). If you're unable
@@ -55,7 +55,7 @@ press F5 (or in the menubar select VIEW then REFRESH).
 
 __________
 DISCLAIMER
-¯¯¯¯¯¯¯¯¯¯
+Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯
 -The font(s) in this zip file were created by the Galactic Federation Fontworks.  All
 of our Fonts are Freeware, you can use them any way you want to
 (Personal use, Commercial use, or whatever).

@@ -1,0 +1,11 @@
+/* Font: Pixelated */
+@font-face {
+    font-family: "pixelated";
+    src: url("pixelated.ttf");
+}
+
+/* Font: Quicksand */
+@font-face {
+    font-family: "quicksand";
+    src: url("quicksand.ttf");
+}

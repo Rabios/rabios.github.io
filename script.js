@@ -1,746 +1,653 @@
 bubbly({
   colorStart: "#4c004c",
   colorStop: "#1a001a",
-  bubbleFunc: function() { return "hsla(" + (Math.random() * 360).toString() + ", 100%, 50%, " + (Math.random() * 0.25).toString() + ")"; }
+  bubbleFunc: function() {
+    return "hsla(" + (Math.random() * 360).toString() + ", 100%, 50%, " + (Math.random() * 0.25).toString() + ")";
+  }
 });
 
-var projects = [
-    {
-        name: "rayport",
-        description: "Awesome C99, Header-Only, rayfork wrapper for raylib!",
-        url: "https://github.com/Rabios/rayport"
-    },
-
-    {
-        name: "raylua",
-        description: "LuaJIT bindings for raylib game programming library",
-        url: "https://github.com/Rabios/raylua"
-    },
-
-    {
-        name: "Crosskit",
-        description: "Cross renderer for SVG, DOM, Canvas, WebGL",
-        url: "https://github.com/Rabios/crosskit"
-    },
-
-    {
-        name: "CLua",
-        description: "Implementation of Lua via LuaJIT FFI and pure Lua code",
-        url: "https://github.com/Rabios/CLua"
-    },
-    
-    {
-        name: "Telvisionation",
-        description: "Archive of my old and deleted projects",
-        url: "https://github.com/steria773-archive"
-    },
-
-    {
-        name: "Pancake",
-        description: "Tiny, Fast, and awesome HTML5 game framework!",
-        url: "https://github.com/Rabios/Pancake"
-    },
+var projects_list = [
+  {
+    name: "ice_libs",
+    description: "Collection of cross-platform single-header C libraries for doing a lot of stuff! (Still WIP)",
+    url: "https://github.com/Rabios/ice_libs",
+    languages: [ "ANSI C, C++, Objective-C" ]
+  },
+  {
+    name: "awesome-raylib",
+    description: "Curated list of awesome stuff for raylib",
+    url: "https://github.com/Rabios/awesome-raylib",
+    languages: [ "Markdown" ]
+  },
+  {
+    name: "raylib-boo",
+    description: "Single-file Boo bindings for raylib!",
+    url: "https://github.com/Rabios/raylib-boo",
+    languages: [ "Boo" ]
+  },
+  {
+    name: "raylua",
+    description: "Cross-Platform, Modern, And updated LuaJIT bindings for raylib library",
+    url: "https://github.com/Rabios/raylua",
+    languages: [ "Lua (LuaJIT)" ]
+  },
+  {
+    name: "lovr-joystick",
+    description: "Module that provides Joystick support for LOVR",
+    url: "https://github.com/Rabios/lovr-joystick",
+    languages: [ "Lua (LuaJIT)" ]
+  },
+  {
+    name: "lovr-clipboard",
+    description: "Module that provides Clipboard support for LOVR",
+    url: "https://github.com/Rabios/lovr-clipboard",
+    languages: [ "Lua (LuaJIT)" ]
+  },
+  {
+    name: "squids-docs",
+    description: "Documentation for Sleepless's Squids game engine!",
+    url: "https://github.com/Rabios/squids-docs",
+    languages: [ "Markdown" ]
+  },
+  {
+    name: "rayutils",
+    description: "Single-Header library that extends raylib with some functionality!",
+    url: "https://github.com/Rabios/rayutils",
+    languages: [ "C" ]
+  },
+  {
+    name: "cherry",
+    description: "Super LuaJIT package manager for everyone!",
+    url: "https://github.com/Rabios/cherry",
+    languages: [ "Lua (LuaJIT)" ]
+  },
+  {
+    name: "polyfill.lua",
+    description: "Polyfills for Lua and LuaJIT in one file, Improvement of CLua.",
+    url: "https://github.com/Rabios/polyfill.lua",
+    languages: [ "Lua (LuaJIT)" ]
+  },
+  {
+    name: "CLua",
+    description: "Reimplementation of Lua modules via LuaJIT's FFI",
+    url: "https://github.com/Rabios/CLua",
+    languages: [ "Lua (LuaJIT)" ]
+  },
+  {
+    name: "Pancake",
+    description: "Lightweight, Fast, Easy-to-use HTML5 game programming library/Game framework for everything!",
+    url: "https://github.com/Rabios/Pancake",
+    languages: [ "JavaScript", "Python" ]
+  },
+  {
+    name: "Pancake.hx",
+    description: "Haxe port of the awesome HTML5 game framework Pancake! ",
+    url: "https://github.com/Rabios/Pancake.hx",
+    languages: [ "Haxe" ]
+  },
+  {
+    name: "rayport",
+    description: "Header-Only rayfork wrapper for raylib! ",
+    url: "https://github.com/Rabios/rayport",
+    languages: [ "C99" ]
+  },
+  {
+    name: "c99-game-template",
+    description: "C99 Template for writing games, Made with love and passion!",
+    url: "https://github.com/Rabios/c99-game-template",
+    languages: [ "C99" ]
+  },
+  {
+    name: "polygl.js",
+    description: "Tiny 2D graphics rendering library!",
+    url: "https://github.com/Rabios/polygl.js",
+    languages: [ "JavaScript" ]
+  },
+  {
+    name: "bouncing-dvd-logo-raylib",
+    description: "Port of Bouncing DVD Logo from a DragonRuby GTK gist, Using raylib with C99!",
+    url: "https://github.com/Rabios/bouncing-dvd-logo-raylib",
+    languages: [ "C99" ]
+  },
+  {
+    name: "chailove-examples-collection",
+    description: "Awesome collection of ChaiLove examples, For everyone!",
+    url: "https://github.com/Rabios/chailove-examples-collection",
+    languages: [ "ChaiScript" ]
+  },
+  {
+    name: "CARRIER",
+    description: "Set of LuaJIT game development libraries!",
+    url: "https://github.com/Rabios/CARRIER",
+    languages: [ "Lua (LuaJIT)" ]
+  },
+  {
+    name: "webscreenconsole",
+    description: "My attempt to do a custom web console with JavaScript :)",
+    url: "https://github.com/Rabios/webscreenconsole",
+    languages: [ "JavaScript" ]
+  },
+  {
+    name: "TARGET",
+    description: "Simple Gradius-inspired shooter game made with raylua!",
+    url: "https://github.com/Rabios/TARGET",
+    languages: [ "Lua (LuaJIT)" ]
+  },
+  {
+    name: "rayfork-games",
+    description: "Full port of raylib sample games to rayfork!",
+    url: "https://github.com/Rabios/rayfork-games",
+    languages: [ "C99" ]
+  },
+  {
+    name: "Tyrius",
+    description: "My experiment of creating 3D FPS game in C with raylib, Still prototype but playable.",
+    url: "https://github.com/Rabios/Tyrius",
+    languages: [ "C99" ]
+  },
+  {
+    name: "LINES-PORTS",
+    description: "Linux, Web and Mobile ports of LINES game.",
+    url: "https://github.com/Rabios/LINES-PORTS",
+    languages: [ "Lua (LuaJIT)", "JavaScript" ]
+  },
+  {
+    name: "cherry-test",
+    description: "Test for the LuaJIT package manager cherry.",
+    url: "https://github.com/Rabios/cherry-test",
+    languages: [ "Lua (LuaJIT)" ]
+  },
+  {
+    name: "load.js",
+    description: "Tiny JavaScript library to load external JavaScript files (scripts) or libraries.",
+    url: "https://github.com/steria773-archive/load.js",
+    languages: [ "JavaScript" ]
+  },
+  {
+    name: "ICECREAMBOY",
+    description: "Simple icecream game sample made with raylua.",
+    url: "https://github.com/steria773-archive/ICECREAMBOY",
+    languages: [ "Lua (LuaJIT)" ]
+  },
+  {
+    name: "Lotus",
+    description: "Simple Lua and MoonScript IDE aimed towards software and game development and also for basic needs.",
+    url: "https://github.com/steria773-archive/Lotus",
+    languages: [ "Python", "Batchscript" ]
+  },
+  {
+    name: "Crosskit",
+    description: "Simple web rendering engine that can renders graphics in canvas2d, WebGL, SVG, DOM",
+    url: "https://github.com/steria773-archive/Crosskit",
+    languages: [ "JavaScript" ]
+  },
+  {
+    name: "raytaiko",
+    description: "Taiko no Tatsujin engine written in Lua using TSnake41's LuaJIT raylib bindings",
+    url: "https://github.com/steria773-archive/raytaiko",
+    languages: [ "Lua (LuaJIT)" ]
+  },
+  {
+    name: "freebasicgl",
+    description: "Playing with OpenGL in GLBasic and FreeBASIC",
+    url: "https://github.com/steria773-archive/freebasicgl/",
+    languages: [ "GLBASIC", "FreeBASIC" ]
+  },
+  {
+    name: "raylib-v7",
+    description: "JavaScript 5.1 bindings for raylib powered by cesanta's v7 JavaScript engine!",
+    url: "https://github.com/Rabios/raylib-v7",
+    languages: [ "C99", "JavaScript 5.1" ]
+  },
+  {
+    name: "rabios.github.io",
+    description: "Yes you guessed, It's the website's source code!",
+    url: "https://github.com/Rabios/rabios.github.io",
+    languages: [ "HTML", "CSS", "JavaScript" ]
+  },
 ];
 
+var games_list = [
+  {
+    name: "LINES!!!",
+    link: [ "https://rabios.itch.io/lines", "https://github.com/Rabios/LINES" ],
+    image: "images/lines.png",
+    genres: [ "Survival" ],
+    platforms: [ "Desktop (Except OSX)", "Windows Phone", "Android", "Web" ],
+    engine: "raylib, Pancake",
+    engine_link: "https://raylib.com",
+    programming_languages: [ "C99", "Lua", "JavaScript" ],
+    team: [ "Rabia Alhaffar (Me)", "darltrash", "anatagawa" ],
+    release_date: "July 8, 2020",
+    description: "Hilariously hard game about surviving fast drawn lasers in no time!!!"
+  },
+  {
+    name: "OpenSenet",
+    link: [ "https://rabios.itch.io/opensenet", "https://github.com/Rabios/OpenSenet" ],
+    image: "images/opensenet.png",
+    genres: [ "Board", "Strategy" ],
+    platforms: [ "Desktop", "Web" ],
+    engine: "DragonRuby GTK",
+    engine_link: "https://dragonruby.org",
+    programming_languages: [ "Ruby" ],
+    team: [ "Rabia Alhaffar (Me)" ],
+    release_date: "November 13, 2020",
+    description: "Senet board game written in Ruby via DragonRuby GTK!"
+  },
+  {
+    name: "cakestack",
+    link: [ "https://rabios.itch.io/cakestack", "https://github.com/Rabios/cakestack" ],
+    image: "images/cakestack.png",
+    genres: [ "Arcade", "Casual" ],
+    platforms: [ "Desktop", "Android", "Web" ],
+    engine: "DragonRuby GTK",
+    engine_link: "https://dragonruby.org",
+    programming_languages: [ "Ruby" ],
+    team: [ "Rabia Alhaffar (Me)" ],
+    release_date: "November 14, 2020",
+    description: "Simple cake stacking game done in 1 hour for TeenyTiny DragonRuby MiniGameJam."
+  },
+  {
+    name: "luckpaint",
+    link: [ "https://rabios.itch.io/luckpaint", "https://github.com/Rabios/luckpaint" ],
+    image: "images/luckpaint.png",
+    genres: [ "Casual" ],
+    platforms: [ "Desktop", "Web" ],
+    engine: "DragonRuby GTK",
+    engine_link: "https://dragonruby.org",
+    programming_languages: [ "Ruby" ],
+    team: [ "Rabia Alhaffar (Me)" ],
+    release_date: "May 6, 2021",
+    description: "8x8 Hybrid pixel art painting game i tried to make in 48 hours just for Juicy Jam #1"
+  }
+];
+
+function arr_comp(strarr) {
+  var res = "";
+
+  for (var i = 0; i < strarr.length; i++) {
+    res += strarr[i] + ((i != strarr.length - 1) ? ", " : "");
+  }
+
+  return res;
+}
+
+// Then, Let's push'em!
+function load_projects_list() {
+  for (var i = 0; i < projects_list.length; i++) {
+    var tr = document.createElement("tr");
+    
+    var td1 = document.createElement("td");
+    td1.style.color = "white";
+    td1.style.fontFamily = "pixelated";
+    td1.style.padding = "8px";
+    td1.style.fontSize = "18px";
+    td1.innerHTML = projects_list[i].name;
+
+    var td2 = document.createElement("td");
+    td2.style.color = "white";
+    td2.style.fontFamily = "pixelated";
+    td2.style.padding = "8px";
+    td2.style.fontSize = "18px";
+    td2.innerHTML = projects_list[i].description;
+  
+    var td3 = document.createElement("td");
+    td3.style.color = "white";
+    td3.style.fontFamily = "pixelated";
+    td3.style.padding = "8px";
+    td3.style.fontSize = "18px";
+    td3.innerHTML = arr_comp(projects_list[i].languages);
+    
+    var td4 = document.createElement("td");
+    td4.style.color = "white";
+    td4.style.fontFamily = "pixelated";
+    td4.style.padding = "8px";
+    td4.style.fontSize = "18px";
+    td4.innerHTML = `<a href="${projects_list[i].url}" style="padding: 8px;"><img src="images/GitHub-Mark-64px.png"></a>`;
+
+    tr.appendChild(td1);
+    tr.appendChild(td2);
+    tr.appendChild(td3);
+    tr.appendChild(td4);
+    
+    var br = document.createElement("br");
+    document.getElementById("kuro").parentNode.appendChild(tr);
+    document.getElementById("kuro").parentNode.appendChild(br);
+  }
+}
+
+var game_index = 0;
+
+function game_info(i) {
+  if (game_image) {
+    document.getElementById("game_image").src = games_list[i].image;
+  } else {
+    var game_image = document.createElement("img");
+    game_image.id = "game_image";
+    game_image.style.width = "50%";
+    game_image.style.padding = "20px";
+    game_image.style.float = "left";
+    
+    document.getElementById("game_link").parentNode.appendChild(game_image);
+  }
+
+  document.getElementById("game_name").innerHTML = games_list[i].name;
+  document.getElementById("game_link").href = games_list[i].link[0];
+  document.getElementById("game_source_link").href = games_list[i].link[1];
+  document.getElementById("game_itchio_link").href = games_list[i].link[0];
+  document.getElementById("game_genre").innerHTML = "GENRES: " + arr_comp(games_list[i].genres);
+  document.getElementById("game_image").src = games_list[i].image;
+  document.getElementById("game_platforms").innerHTML = "PLATFORMS: " + arr_comp(games_list[i].platforms);
+  document.getElementById("game_engine").innerHTML = "ENGINE/FRAMEWORK/LIBRARY: " + games_list[i].engine;
+  document.getElementById("game_prog_langs").innerHTML = "PROGRAMMING LANGUAGES: " + arr_comp(games_list[i].programming_languages);
+  document.getElementById("game_team").innerHTML = "DEVELOPMENT TEAM: " + arr_comp(games_list[i].team);
+  document.getElementById("game_release_date").innerHTML = "RELEASE DATE: " + games_list[i].release_date;
+  document.getElementById("game_description").innerHTML = games_list[i].description;
+}
+
+function next_game() {
+  if (game_index + 1 == games_list.length) {
+    game_index = 0;
+  } else {
+    game_index++;
+  }
+  game_info(game_index);
+}
+
+function previous_game() {
+  if (game_index - 1 < 0) {
+  game_index = games_list.length - 1;
+  } else {
+  game_index--;
+  }
+  game_info(game_index);
+}
+
 function project_info(i) {
-    document.getElementById("projects").style.visibility = "visible";
-    document.getElementById("name").innerHTML = projects[i].name;
-    document.getElementById("description").innerHTML = projects[i].description;
-    document.getElementById("url").innerHTML = projects[i].url;
-    document.getElementById("url").href = projects[i].url;
+  document.getElementById("projects").style.visibility = "visible";
+  document.getElementById("name").innerHTML = projects[i].name;
+  document.getElementById("description").innerHTML = projects[i].description;
+  document.getElementById("url").innerHTML = projects[i].url;
+  document.getElementById("url").href = projects[i].url;
 }
 
 var codes = [
-    {
-        code: `
-        _C.array = function(ctype, ...)
-          local args = { ... }
-          if (#args == 1) then
-            if (ctype == "char") then
-              return ffi.new(ctype.."[?]", args[1])
-            else
-              return ffi.new(ctype.."["..args[1].."]")
-            end
-          else
-            return ffi.new(ctype.."["..#args.."]", args)
-          end
-        end`,
-        language: "lua",
-        src: "https://github.com/Rabios/CLua/blob/master/src/ctypes.lua"
-    },
-
-    {
-        code:
-        `
-        -- Custom ipairs by mine :)
-        _C.super_ipairs = function(...)
-          p = { ... }
-          i = p[1]
-          t = p[2]
-          f = p[3]
-          flush = p[4]
-          for tv = 1, #t, 1 do
-            if type(f) == "function" then
-              i = i + 1
-              f(i)
-            end
-          end
-          -- You can flush and destory tay/table after loop if you don't want to use it later ;)
-          if flush and flush == true and not (#t == 0) then
-            t = nil
-          end
-          p = nil
-        end`,
-        language: "lua",
-        src: "https://github.com/Rabios/CLua/blob/master/src/runtime.lua"
-    },
-
-    {
-        code:
-        `
-        p.v.play = function(v, x, y, w, h) {
-            if (p.d.unknown(x)) x = 0;
-            if (p.d.unknown(y)) y = 0;
-            if (p.d.unknown(w)) w = p.g.context.canvas.width;
-            if (p.d.unknown(h)) h = p.g.context.canvas.height;
-            if (!p.videos[v].ended) {
-                p.g.image(p.videos[v], x, y, w, h);
-                p.videos[v].play();
-                if (p.videos[v].loop) {
-                    p.g.image(p.videos[v], x, y, w, h);
-                    p.videos[v].play();
-                }
-            }
-        };`,
-        language: "javascript",
-        src: "https://github.com/Rabios/Pancake/blob/master/src/video.js"
-    },
-
-    {
-        code:
-        `
-        function correct_tables(t1, t2)
-          local check = 0
-          if (#t1 > 0 and #t2 > 0) then
-            if (#t2 == #t1) then
-              for a in ipairs(t2) do
-                if (t2[a] == t1[a]) then
-                  check = check + 1
-                end
-              end
-              return (check == #t2)
-            end
-          end
-        end`,
-        language: "lua",
-        src: "https://github.com/Rabios/ICECREAMBOY/blob/master/logic.lua"
-    },
-
-    {
-        code:
-        `
-        void FreeMode() {
-            UpdateCamera(&gamecam);
-            CameraLogic();
-            BeginDrawing();
-            ClearBackground(backcolor);         
-            BeginMode3D(gamecam);
-            Draw3DDefaults(env,nightmode,ppos);
-            DrawWeapon(1);            
-            CombatLogic();
-            EndMode3D();            
-            GameGUI();
-            DrawFPS(10,10);
-            DrawTextEx(f2,"BACK: BACKSPACE",(Vector2){ 10.0f,GetScreenHeight() - 120.0f },32,1.0f,BLACK);
-            if (IsKeyPressed(KEY_BACKSPACE)) scene = 2;
-            EndDrawing();    
-            TraceLog(LOG_INFO,"FREEMODE STARTED SUCCESSFULLY!!!");
-        }`,
-        language: "c",
-        src: "https://github.com/Rabios/Tyrius/blob/master/tyrius.c"
-    },
-
-    {
-        code:
-        `
-        function update_palette()
-          for p in ipairs(icecreams) do
-            rl.DrawRectangle((p * 200) - 200, rl.GetScreenHeight() - 200, 200, 200, icecreams[p][2])
-            rl.DrawRectangleLines((p * 200) - 200, rl.GetScreenHeight() - 200, 200, 200, rl.BLACK)
-            if rl.CheckCollisionRecs(rl.Rectangle((p * 200) - 200, rl.GetScreenHeight() - 200, 200, 200), mouserec()) then
-              if rl.IsMouseButtonPressed(0) then
-                if not (balls_count > balls_limit) then
-                  rl.PlaySound(addball_sound)
-                  table.insert(balls, icecreams[p][2])
-                  balls_count = balls_count + 1
-                end
-              end
-              rl.DrawText(icecreams[p][1], (p * 200) - 200, rl.GetScreenHeight() - 200, 24, rl.WHITE)
-            end
-            if rl.IsMouseButtonPressed(1) then
-              if (#balls > 0) then
-                table.remove(balls, #balls)
-                balls_count = 1
-              end
-            end
-          end
-        end`,
-        language: "lua",
-        src: "https://github.com/Rabios/ICECREAMBOY/blob/master/logic.lua"
-    },
-
-    {
-        code:
-        `
-        global map
-        global colors
-        
-        def load() {
-          map = [
-            [ 1, 2, 3, 4, 5 ],
-            [ 5, 4, 3, 1, 1 ],
-            [ 1, 5, 1, 3, 4 ],
-            [ 4, 1, 5, 3, 2 ],
-            [ 5, 2, 4, 1, 3 ]
-          ]
-          colors = [
-            [ 0, 0, 0 ],
-            [ 255, 0, 0 ],
-            [ 0, 255, 0 ],
-            [ 0, 0, 255 ],
-            [ 255, 255, 255 ],
-            [ 255, 0, 255 ]
-          ]
-        }
-        
-        def draw() {
-          for (var i = 0; i < map.size(); ++i) {
-            for (var j = 0; j < map[i].size(); ++j) {
-              if (!(map[i][j] == map.size())) {
-                love.graphics.setColor(colors[map[i][j]][0], colors[map[i][j]][1], colors[map[i][j]][2])
-                love.graphics.rectangle("fill", j * 20, i * 20, 20, 20)
-              }
-            }
-          }
-        }`,
-        language: "chaiscript",
-        src: "https://github.com/Rabios/chailove-examples-collection/blob/master/tilemaps.chai"
-    },
-
-    {
-        code:
-        `
-        function update_heal()
-          if healbag.draw then
-            healbag.x = healbag.x - speed
-            rl.DrawTexturePro(heal_image, rl.Rectangle(0, 0, heal_image.width, heal_image.height), rl.Rectangle(healbag.x, healbag.y, 64, 64), rl.Vector2(0, 0), 0, flash())
-            if rl.CheckCollisionRecs(rl.Rectangle(healbag.x, healbag.y, 64, 64), rl.Rectangle(player.x, player.y, player.w, player.h)) then
-              rl.PlaySound(heal_sound)
-              health = health + heal
-              if health >= 100 then
-                ships = ships + 1
-                health = health - 100
-              end
-              healbag.draw = false
-            end
-          end
-        end
-        `,
-        language: "lua",
-        src: "https://github.com/Rabios/TARGET/blob/master/logic.lua"
-    },
-
-    {
-        code: `
-        p.g.gradientRect = function(x, y, w, h, content) {
-            var linear = p.g.c.createLinearGradient(x, y, w, h);
-            for (var loopdlg = 0; loopdlg < content.length; loopdlg++) linear.addColorStop(content[loopdlg][0], content[loopdlg][1]);
-            p.g.color(linear, linear);
-            if (p.g.mode == p.g.FILL) p.g.c.fillRect(x, y, w, h);
-            if (p.g.mode == p.g.STROKE) p.g.c.strokeRect(x, y, w, h);
-            if (p.g.mode == p.g.BOTH)
-            {
-                p.g.c.fillRect(x, y, w, h);
-                p.g.c.strokeRect(x, y, w, h);
-            }
-        };`,
-        language: "javascript",
-        src: "https://github.com/Rabios/Pancake/blob/master/src/graphics.js"
-    },
-
-    {
-        code: `
-        _C.coroutine.resume = function(c, ...)
-          if (not c.dead) or (c.status == "suspended" or c.status == "normal") then
-            c.fun(...)
-            c.status = "running"
-            local ccount = 1
-            local running_coroutines = 0
-            _C.ipairs(ccount, _C.coroutine.coroutines, function(ccount)
-              if (_C.coroutine.coroutines[ccount].status == "running") then
-                running_coroutines = running_coroutines + 1
-              end
-            end)
-            if (running_coroutines > 1) then c.status = "normal" end
-            if (c.running_times == c.running_limit) then
-              _C.coroutine.kill(c)
-            else
-              c.running_times = c.running_times + 1
-            end
-            if (not c.yield_args == nil) then return c.yield_args end
-            ccount = nil
-            running_coroutines = nil
-          end
-        end`,
-        language: "lua",
-        src: "https://github.com/Rabios/CLua/blob/master/src/coroutine.lua"
-    },
-
-    {
-        code: `
-        _C.math.random = function(...)
-          local r = { ... }
-          if (#r == 0) then
-            return ffi.C.rand() % 0
-          elseif (#r == 1) then
-            return ffi.C.rand() % r[1]
-          elseif (#r == 2) then
-            return _C.math.floor(ffi.C.rand() % r[2]) + r[1]
-          end
-          r = nil
-        end`,
-        language: "lua",
-        src: "https://github.com/Rabios/CLua/blob/master/src/math.lua"
-    },
-
-    {
-        code: `
-        _C.table.concat = function(t, s)
-          local result = ""
-          for str in _C.ipairs(t, str) do
-            if (type(t[str]) == "string") then
-              if (str == #t) then s = "" end
-              result = result..(t[str]..s)
-            elseif (type(t[str]) == "number") then
-              if (str == #t) then s = "" end
-              result = result..(_C.tostring(t[str])..s)
-            end
-          end
-          return result
-        end`,
-        language: "lua",
-        src: "https://github.com/Rabios/CLua/blob/master/src/table.lua"
-    },
-
-    {
-        code: `
-        function update_portal()
-          if portal.draw then
-            portal.x = portal.x - speed
-            rl.DrawTexturePro(portal_image, rl.Rectangle(0, 0, portal_image.width, portal_image.height), rl.Rectangle(portal.x, portal.y, 64, 64), rl.Vector2(0, 0), 0, flash())
-            if rl.CheckCollisionRecs(rl.Rectangle(portal.x, portal.y, 64, 64), rl.Rectangle(player.x, player.y, player.w, player.h)) then
-              portal.draw = false
-              paused = true
-              current_scene = 5
-            end
-          end
-        end`,
-        language: "lua",
-        src: "https://github.com/Rabios/TARGET/blob/master/logic.lua"
-    },
-
-    {
-        code: `
-        function update_orders()
-          if (#orders > 0) then
-            rl.DrawRectangleLines(rl.GetScreenWidth() - 200, 0, 200, 200, rl.GOLD)
-            rl.DrawTexturePro(cone, texrec(cone), rl.Rectangle((rl.GetScreenWidth() - (32 * 3.5)), rl.GetScreenHeight() - 600, 32, 32), rl.Vector2(0, 0), 0, rl.WHITE)
-            if orders[current_order] then
-              for rb in ipairs(orders[current_order]) do
-                rl.DrawTexturePro(ball, texrec(ball), rl.Rectangle((rl.GetScreenWidth() - (32 * 3.5)), (rl.GetScreenHeight() - 600) - (rb * 32), 32, 32), rl.Vector2(0, 0), 0, orders[current_order][rb])
-              end
-              if rl.IsKeyPressed(rl.KEY_A) or rl.IsKeyPressed(rl.KEY_LEFT) then
-                if not ((current_order - 1) == 0) and orders[current_order - 1] then
-                  current_order = current_order - 1
-                end
-              elseif rl.IsKeyPressed(rl.KEY_D) or rl.IsKeyPressed(rl.KEY_RIGHT) then
-                if not ((current_order + 1) > orders_limit) and orders[current_order + 1] then
-                  current_order = current_order + 1
-                end
-              end
-            end
-          end
-        end`,
-        language: "lua",
-        src: "https://github.com/Rabios/ICECREAMBOY/blob/master/logic.lua"
-    },
-
-    {
-        code: `
-        -- Play random hit sound
-        function play_hit_sound()
-          onetime = 0
-          number = rl.GetRandomValue(1, 4)
-          if onetime == 0 then
-            rl.PlaySound(_G["hit"..tostring(number).."_sound"])
-            onetime = 1
-          end
-        end`,
-        language: "lua",
-        src: "https://github.com/Rabios/TARGET/blob/master/utils.lua"
-    },
-
-    {
-        code: `
-        package pancake;
-
-        import haxe.Constraints.Function;
-        
-        /**
-         * ...
-         * @author Rabia Haffar
-         */
-        @:native("navigator.app")
-        extern class NavigatorApp {
-            public static function exitApp(): Void;
-        }
-        
-        @:native("navigator.device")
-        extern class NavigatorDevice {
-            public static function exitApp(): Void;
-        }
-        
-        @:native("nw")
-        extern class NWJS {}
-        
-        @:native("nw.Window")
-        extern class NWJSWindow {
-            public static function get(): NWJS_Window_Props;
-        }
-        
-        @:native("nw.Window.get()")
-        extern class NWJS_Window_Props {
-            public function enterFullscreen(): Void;
-            public function toggleFullscreen(): Void;
-            public function leaveFullscreen(): Void;
-        }
-        
-        @:native("window")
-        extern class Window {
-            public static function require(module: String): Dynamic;
-            public static var onmspointerup: haxe.Constraints.Function;
-            public static var onmspointerdown: haxe.Constraints.Function;
-            public static var onmspointermove: haxe.Constraints.Function;
-        }
-        
-        @:native("window.require('electron').remote.getCurrentWindow()")
-        extern class ElectronWindow {
-            public static function setFullScreen(fullscreen: Bool): Void;
-            public static function setMenuBarVisibility(visible: Bool): Void;
-        }
-        
-        @:native("window.Windows")
-        extern class Windows {}
-        
-        @:native("window.Windows.Gaming.Input.Gamepad")
-        extern class UWPGamepadInput {
-            public static var gamepads: Array<UWPGamepad>;
-        }
-        
-        extern class UWPGamepad {
-            public function getCurrentReading(): UWPGamepadState;
-        }
-        
-        @:native("window.Windows.UI.ViewManagement.ApplicationView.getForCurrentView()")
-        extern class UWPCurrentView {
-            public static var title: String;
-            public static var isFullScreen: Bool;
-            public static var isFullScreenMode: Bool;
-            public static var fullScreenSystemOverlayMode: Int;
-            public static function tryEnterFullScreenMode(): Bool;
-            public static function exitFullScreenMode(): Void;
-        }
-        
-        @:native("window.Windows.UI.ViewManagement.ApplicationViewWindowingMode")
-        extern class UWPWindowingModes {
-            public static var fullscreen: Int;
-            public static var auto: Int;
-            public static var preferredLaunchViewSize: Int;
-        }
-        
-        @:native("window.Windows.Gaming.Input.GamepadButtons")
-        extern class UWPGamepadButtons {
-            public static var a: Int;
-            public static var b: Int;
-            public static var x: Int;
-            public static var y: Int;
-            public static var dpadUp: Int;
-            public static var dpadDown: Int;
-            public static var dpadLeft: Int;
-            public static var dpadRight: Int;
-            public static var leftShoulder: Int;
-            public static var rightShoulder: Int;
-            public static var view: Int;
-            public static var menu: Int;
-            public static var leftThumbstick: Int;
-            public static var rightThumbstick: Int;
-        }
-        
-        extern class UWPGamepadState {
-            public var buttons: Int;
-            public var leftThumbstickX: Float;
-            public var leftThumbstickY: Float;
-            public var rightThumbstickX: Float;
-            public var rightThumbstickY: Float;
-            public var leftTrigger: Float;
-            public var rightTrigger: Float;
-            public var timestamp: Float;
-        }`,
-        language: "haxe",
-        src: "https://github.com/Rabios/Pancake.hx/blob/master/src/pancake/Native.hx"
-    },
-
-    {
-      code: `
-      void draw_texture(char* src, rect srcRec, rect dstRec, color tint) {
-        printf("GAME: LOADING TEXTURE %s", src);
-      
-        GLuint texture;
-        int width, height, nrChannels;
-        unsigned char* data = stbi_load(src, &width, &height, &nrChannels, STBI_rgb_alpha);
-        if (data) {
-            glEnable(GL_TEXTURE_2D);
-            glEnable(GL_BLEND);
-            glGenTextures(1, &texture);
-            glBindTexture(GL_TEXTURE_2D, texture);
-            glActiveTexture(GL_TEXTURE0);
-    
-            glColor4f(tint.r, tint.g, tint.b, tint.a);
-            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
-            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
-            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
-            glBlendFunc(GL_ONE, GL_ONE_MINUS_DST_ALPHA);
-            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-            glGenerateMipmap(GL_TEXTURE_2D);
-    
-            if (!srcRec.w) srcRec.w = (float) width;
-            if (!srcRec.h) srcRec.h = (float)height;
-            if (!dstRec.w) dstRec.w = (float) width;
-            if (!dstRec.h) dstRec.h = (float) height;
-    
-            float ix1 = (float) srcRec.x / width;
-            float ix2 = (float) (srcRec.w + srcRec.x) / width;
-            float iy1 = (float) srcRec.y / height;
-            float iy2 = (float) (srcRec.h + srcRec.y) / height;
-    
-            glBegin(GL_QUADS);
-            glTexCoord2f(ix1, iy1);
-            glVertex2i(dstRec.x, dstRec.y);
-            glTexCoord2f(ix2, iy1);
-            glVertex2i(dstRec.x + dstRec.w, dstRec.y);
-            glTexCoord2f(ix2, iy2);
-            glVertex2i(dstRec.x + dstRec.w, dstRec.y + dstRec.h);
-            glTexCoord2f(ix1, iy2);
-            glVertex2i(dstRec.x, dstRec.y + dstRec.h);
-            glEnd();
-    
-            glBindTexture(GL_TEXTURE_2D, 0);
-            glDeleteTextures(1, &texture);
-            glDisable(GL_TEXTURE_2D);
-            glDisable(GL_BLEND);
-    
-            printf("GAME: UNLOADING TEXTURE %s", src);
-            stbi_image_free(data);
-        } else {
-            printf("GAME: FAILED TO LOAD TEXTURE %s!", src);
-        }
-    }`,
-      language: "c",
-      src: "https://github.com/Rabios/c99-game-template/blob/main/src/main.c"
-    },
-
-    {
-      code: `
-      //////////////////////////////////////////////////////////////////////////////////////
-      // Loop: Where game loop lies
-      //////////////////////////////////////////////////////////////////////////////////////
-      void loop(int argc, char** argv) {
-          while (!glfwWindowShouldClose(window)) {
-              RunPhysicsStep();
-      
-              for (int i = 0; i < 16; i++) {
-                  joysticks[i].name = glfwGetJoystickName(joysticks[i].index);
-                  joysticks[i].buttons = glfwGetJoystickButtons(joysticks[i].index, &joysticks[i].buttons_count);
-                  joysticks[i].axes = glfwGetJoystickAxes(joysticks[i].index, &joysticks[i].axes_count);
-                  joysticks[i].hats = glfwGetJoystickHats(joysticks[i].index, &joysticks[i].hats_count);
-              }
-      
-              /*
-              if (window_fullscreen) {
-                  glfwSetWindowMonitor(window, window_fullscreen ? glfwGetPrimaryMonitor() : NULL, 0, 0, glfw_window_width, glfw_window_height, GLFW_REFRESH_RATE);
-              } else {
-                  glfwSetWindowMonitor(window, NULL, glfw_window_x, glfw_window_y, glfw_window_width, glfw_window_height, GLFW_DONT_CARE);
-              }
-              */
-      
-              if (window_fullscreen) glfwSetWindowMonitor(window, window_fullscreen ? glfwGetPrimaryMonitor() : NULL, 0, 0, glfw_window_width, glfw_window_height, GLFW_REFRESH_RATE);
-      
-              glfwGetFramebufferSize(window, &window_height, &window_height);
-      
-              t2 = glfwGetTime();
-              dt = t2 - t1;
-      
-              if (dt >= (1.0 / game_fps)) {
-                  printf("GAME: UPDATING...");
-                  update(argc, &argv);
-                  printf("GAME: RECEIEVING GAME INPUT...");
-                  input(argc, &argv);
-                  t1 = t2;
-              }
-      
-              printf("GAME: RENDERING...");
-              glViewport(0, 0, window_width, window_height);
-              glMatrixMode(GL_MODELVIEW);
-              glLoadIdentity();
-              glOrtho(0, window_width, 0, window_height, -1, 1);
-              glScalef(1, -1, 1);
-              glTranslatef(0, -window_height, 0);
-      
-              draw(argc, &argv);
-              glfwSwapBuffers(window);
-              glfwPollEvents();
-          }
-          printf("GAME: CLOSING DISPLAY WINDOW...");
-          close(argc, &argv);
-          glfwDestroyWindow(window);
-          glfwTerminate();
-          ma_engine_uninit(&audio_engine);
-          ClosePhysics();
-          enet_deinitialize();
-          printf("GAME: CLOSED SUCCESSFULLY!");
-          exit(0);
-      }`,
-      language: "c",
-      src: "https://github.com/Rabios/c99-game-template/blob/main/src/main.c"
-    },
-
-    {
-      code: `
-      //////////////////////////////////////////////////////////////////////////////////////
-      // Initialization: This holds creation of game window and assigns callbacks
-      //////////////////////////////////////////////////////////////////////////////////////
-      int main(int argc, char** argv) {
-        init(argc, &argv);
-        start(argc, &argv);
-        return 0;
-      }
-      
-      void start(int argc, char** argv) {
-        //////////////////////////////////////////////////////////////////////////////////
-        // Networking Initialization (enet.h)
-        //////////////////////////////////////////////////////////////////////////////////
-        if (enet_initialize() == 0) {
-            printf("GAME: NETWORKING INITIALIZED SUCCESSFULLY!");
-        }
-    
-    
-        //////////////////////////////////////////////////////////////////////////////////
-        // Physics Initialization (physac.h)
-        //////////////////////////////////////////////////////////////////////////////////
-        InitPhysics();
-    
-    
-        //////////////////////////////////////////////////////////////////////////////////
-        // Audio Initialization (miniaudio.h)
-        //////////////////////////////////////////////////////////////////////////////////
-        printf("GAME: INITIALIZING AUDIO ENGINE...");
-    
-        audio_engine_init_result = ma_engine_init(NULL, &audio_engine);
-        if (audio_engine_init_result != MA_SUCCESS) {
-            printf("GAME: AUDIO ENGINE INITIALIZATION FAILED!");
-            return -1;
-        }
-    
-        printf("GAME: AUDIO ENGINE INITIALIZED SUCCESSFULLY!");
-    
-    
-        //////////////////////////////////////////////////////////////////////////////////
-        // Window + OpenGL Initialization
-        //////////////////////////////////////////////////////////////////////////////////
-    #ifdef WINDOW_FULLSCREEN
-        window_fullscreen = true;
-    #endif
-        printf("GAME: STARTING...");
-        glfwSetErrorCallback(error);
-        if (glfwInit()) {
-            t1 = glfwGetTime();
-            t2 = 0;
-            dt = 0;
-    
-            printf("GAME: CREATING DISPLAY WINDOW...");
-    #ifdef ANTIALIASING_ENABLED
-            printf("GAME: ANTIALIASING ENABLED!");
-            glfwWindowHint(GLFW_SAMPLES, ANTIALIASING_SAMPLES);
-    #endif
-    #ifdef __APPLE__
-            glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-            glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 2);
-            glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-            glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    #endif
-            window = glfwCreateWindow(window_width, window_height, window_title, window_fullscreen ? glfwGetPrimaryMonitor() : NULL, NULL);
-    #ifndef WINDOW_RESIZABLE
-            glfwSetWindowAttrib(window, GLFW_RESIZABLE, GLFW_FALSE);
-    #endif
-            if (!window) {
-                printf("GAME: FAILED TO CREATE DISPLAY WINDOW!");
-                glfwTerminate();
-                exit(error_code);
-            }
-            printf("GAME: DISPLAY WINDOW CREATED SUCCESSFULLY!");
-            glfwSetKeyCallback(window, keyboard);
-            glfwSetMouseButtonCallback(window, mouse);
-            glfwSetCursorPosCallback(window, cursor);
-            glfwSetDropCallback(window, file_drop);
-    #ifdef WINDOW_RESIZABLE
-            glfwSetWindowSizeCallback(window, window_resize);
-    #endif
-            glfwGetWindowPos(window, &glfw_window_x, &glfw_window_y);
-            glfwGetWindowSize(window, &glfw_window_width, &glfw_window_height);
-            for (int i = 0; i < 16; i++) {
-                joysticks[i].index = i;
-            }
-    #ifdef VSYNC_ENABLED
-            glfwSwapInterval(1);
-    #else
-            glfwSwapInterval(0);
-    #endif
-      glfwMakeContextCurrent(window);
-    #ifdef _WIN32 || WIN32
-            gladLoadGL(glfwGetProcAddress);
-    #else
-            gladLoadGL();	    
-    #endif
-            printf("%s%s", "GAME: USED OPENGL ", glGetString(GL_VERSION));
-            loop(argc, &argv);
-        }
-        else {
-            printf("GAME: FAILED TO CREATE DISPLAY WINDOW!");
-            glfwTerminate();
-            exit(error_code);
-        }
-    }`,
-    language: "c",
-    src: "https://github.com/Rabios/c99-game-template/blob/main/src/main.c"
-    }
+  {
+    file: "cherry0.lua",
+    language: "Lua",
+    src: "https://github.com/Rabios/cherry/blob/master/cherry.lua#L87"
+  },
+  {
+    file: "cherry1.lua",
+    language: "Lua",
+    src: "https://github.com/Rabios/cherry/blob/master/cherry.lua#L185"
+  },
+  {
+    file: "cherry2.lua",
+    language: "Lua",
+    src: "https://github.com/Rabios/cherry/blob/master/cherry.lua#L195"
+  },
+  {
+    file: "cherry3.lua",
+    language: "Lua",
+    src: "https://github.com/Rabios/cherry/blob/master/cherry.lua#L380"
+  },
+  {
+    file: "cherry4.lua",
+    language: "Lua",
+    src: "https://github.com/Rabios/cherry/blob/master/cherry.lua#L411"
+  },
+  {
+    file: "sqr.lsp",
+    language: "Fennel",
+    src: "https://gist.githubusercontent.com/Rabios/49efa3c4a9c54f83a7e75a6620d9cd74/raw/1f232640d7fb17ecc5717e11f0318a33905f0d07/sqr.lsp"
+  },
+  {
+    file: "player.lsp",
+    language: "Fennel",
+    src: "https://gist.githubusercontent.com/Rabios/49efa3c4a9c54f83a7e75a6620d9cd74/raw/1f232640d7fb17ecc5717e11f0318a33905f0d07/player.lsp"
+  },
+  {
+    file: "obj.lsp",
+    language: "Fe",
+    src: "https://gist.githubusercontent.com/Rabios/49efa3c4a9c54f83a7e75a6620d9cd74/raw/1f232640d7fb17ecc5717e11f0318a33905f0d07/obj.lsp"
+  },
+  {
+    file: "Screen.hx",
+    language: "Haxe",
+    src: "https://gist.githubusercontent.com/Rabios/49efa3c4a9c54f83a7e75a6620d9cd74/raw/1f232640d7fb17ecc5717e11f0318a33905f0d07/Screen.hx"
+  },
+  {
+    file: "lovr-clipboard.lua",
+    language: "Lua",
+    src: "https://github.com/Rabios/lovr-clipboard/blob/master/lovr-clipboard.lua"
+  },
+  {
+    file: "sfml_test.lua",
+    language: "Lua",
+    src: "https://gist.githubusercontent.com/Rabios/49efa3c4a9c54f83a7e75a6620d9cd74/raw/1f232640d7fb17ecc5717e11f0318a33905f0d07/sfml_test.lua"
+  },
+  {
+    file: "arr_match.rb",
+    language: "Ruby",
+    src: "https://github.com/Rabios/luckpaint/blob/main/app/main.rb#L28"
+  },
+  {
+    file: "flash.lua",
+    language: "Lua",
+    src: "https://github.com/Rabios/TARGET/blob/master/utils.lua#L174"
+  },
+  {
+    file: "stars.lua",
+    language: "Lua",
+    src: "https://github.com/Rabios/TARGET/blob/master/utils.lua#L104"
+  },
+  {
+    file: "Native.hx",
+    language: "Haxe",
+    src: "https://github.com/Rabios/Pancake.hx/blob/master/src/pancake/Native.hx"
+  },
+  {
+    file: "genstr.js",
+    language: "JavaScript",
+    src: "https://gist.githubusercontent.com/Rabios/49efa3c4a9c54f83a7e75a6620d9cd74/raw/1f232640d7fb17ecc5717e11f0318a33905f0d07/genstr.js"
+  },
+  {
+    file: "heal.lua",
+    language: "Lua",
+    src: "https://github.com/Rabios/TARGET/blob/master/logic.lua#L22"
+  },
+  {
+    file: "portal.lua",
+    language: "Lua",
+    src: "https://github.com/Rabios/TARGET/blob/master/logic.lua#L38"
+  },
+  {
+    file: "correct_tables.lua",
+    language: "Lua",
+    src: "https://github.com/steria773-archive/ICECREAMBOY/blob/master/logic.lua#L117"
+  },
+  {
+    file: "rows_cols.rb",
+    language: "Ruby",
+    src: "https://gist.githubusercontent.com/Rabios/49efa3c4a9c54f83a7e75a6620d9cd74/raw/1f232640d7fb17ecc5717e11f0318a33905f0d07/rows_cols.rb"
+  },
+  {
+    file: "arr_take.js",
+    language: "JavaScript",
+    src: "https://gist.githubusercontent.com/Rabios/49efa3c4a9c54f83a7e75a6620d9cd74/raw/1f232640d7fb17ecc5717e11f0318a33905f0d07/arr_take.js"
+  },
+  {
+    file: "fib.js",
+    language: "JavaScript",
+    src: "https://gist.githubusercontent.com/Rabios/49efa3c4a9c54f83a7e75a6620d9cd74/raw/1f232640d7fb17ecc5717e11f0318a33905f0d07/fib.js"
+  },
+  {
+    file: "fact.js",
+    language: "JavaScript",
+    src: "https://gist.githubusercontent.com/Rabios/49efa3c4a9c54f83a7e75a6620d9cd74/raw/1f232640d7fb17ecc5717e11f0318a33905f0d07/fact.js"
+  },
+  {
+    file: "multicall.js",
+    language: "JavaScript",
+    src: "https://gist.githubusercontent.com/Rabios/49efa3c4a9c54f83a7e75a6620d9cd74/raw/1f232640d7fb17ecc5717e11f0318a33905f0d07/multicall.js"
+  },
+  {
+    file: "infinite_calls.js",
+    language: "JavaScript",
+    src: "https://gist.githubusercontent.com/Rabios/49efa3c4a9c54f83a7e75a6620d9cd74/raw/1f232640d7fb17ecc5717e11f0318a33905f0d07/infinite_calls.js"
+  },
+  {
+    file: "a_crashes_b.js",
+    language: "JavaScript",
+    src: "https://gist.githubusercontent.com/Rabios/49efa3c4a9c54f83a7e75a6620d9cd74/raw/1f232640d7fb17ecc5717e11f0318a33905f0d07/a_crashes_b.js"
+  },
+  {
+    file: "random_hit_sound.lua",
+    language: "Lua",
+    src: "https://github.com/Rabios/TARGET/blob/master/utils.lua#L132"
+  },
+  {
+    file: "other_pieces.rb",
+    language: "Ruby",
+    src: "https://github.com/Rabios/OpenSenet/blob/main/app/utils.rb#L12"
+  },
+  {
+    file: "check_winner.rb",
+    language: "Ruby",
+    src: "https://github.com/Rabios/OpenSenet/blob/main/app/utils.rb#L60"
+  },
+  {
+    file: "remove_piece.rb",
+    language: "Ruby",
+    src: "https://github.com/Rabios/OpenSenet/blob/main/app/pieces.rb#L191"
+  },
+  {
+    file: "piece_clicked.rb",
+    language: "Ruby",
+    src: "https://github.com/Rabios/OpenSenet/blob/main/app/pieces.rb#L255"
+  },
+  {
+    file: "roll.rb",
+    language: "Ruby",
+    src: "https://github.com/Rabios/OpenSenet/blob/main/app/sticks.rb#L27"
+  },
+  {
+    file: "ice_arr_sort_ex.c",
+    language: "ANSI C",
+    src: "https://github.com/Rabios/ice_libs/blob/master/ice_arr.h#L756"
+  },
+  {
+    file: "ice_str_split.c",
+    language: "ANSI C",
+    src: "https://github.com/Rabios/ice_libs/blob/master/ice_str.h#L451"
+  },
+  {
+    file: "ice_math_pow.c",
+    language: "ANSI C",
+    src: "https://github.com/Rabios/ice_libs/blob/master/ice_math.h#L864"
+  },
+  {
+    file: "ice_test_assert_str_equ.c",
+    language: "ANSI C",
+    src: "https://github.com/Rabios/ice_libs/blob/master/ice_test.h#L121"
+  },
+  {
+    file: "table_move.lua",
+    language: "Lua",
+    src: "https://github.com/Rabios/polyfill.lua/blob/master/polyfill.lua#L602"
+  },
+  {
+    file: "table_maxn.lua",
+    language: "Lua",
+    src: "https://github.com/Rabios/polyfill.lua/blob/master/polyfill.lua#L781"
+  },
+  {
+    file: "table_keys.lua",
+    language: "Lua",
+    src: "https://github.com/Rabios/polyfill.lua/blob/master/polyfill.lua#L888"
+  },
+  {
+    file: "sizeof.js",
+    language: "JavaScript",
+    src: "https://gist.github.com/Rabios/97a059ec18f6dee477dee7fe061901e8"
+  },
+  {
+    file: "arr2obj.js",
+    language: "JavaScript",
+    src: "https://gist.github.com/Rabios/607a001fcbf59076d0d4a1f51cfab864"
+  },
+  {
+    file: "pyramid.lua",
+    language: "Lua",
+    src: "https://gist.github.com/Rabios/8bb69963e147986447498d1dfd09b1fc"
+  },
+  {
+    file: "copy_array.js",
+    language: "JavaScript",
+    src: "https://gist.github.com/Rabios/5f0d6ca722e61aa8c5371063581fc6a5"
+  },
+  {
+    file: "even_or_odd.lua",
+    language: "Lua",
+    src: "https://gist.github.com/Rabios/2eb0f1cbf55b487902ba74f0e7213961"
+  },
+  {
+    file: "biggest_and_smallest_number_in_table.lua",
+    language: "Lua",
+    src: "https://gist.github.com/Rabios/d3c5368e77c11ddf2bf53c155688aaa7"
+  },
+  {
+    file: "generate_environment.c",
+    language: "ANSI C",
+    src: "https://github.com/Rabios/Tyrius/blob/master/tyrius.c#L704"
+  },
+  {
+    file: "openproject.py",
+    language: "Python",
+    src: "https://github.com/steria773-archive/Lotus/blob/master/main.py#L316"
+  },
+  {
+    file: "take_screenshot.rb",
+    language: "Python",
+    src: "https://github.com/Rabios/luckpaint/blob/main/app/main.rb#L158"
+  }
 ];
 
 function randomize_code() {
-    var random_code = codes[Math.floor(Math.random() * codes.length)];
-    document.getElementById("edit").innerHTML = random_code.code;
-    document.getElementById("edit").className = random_code.language;
-    document.getElementById("random-source-code").href = random_code.src;
-    hljs.initHighlighting();
+  var random_code = codes[Math.floor(Math.random() * codes.length)];
+  document.getElementById("random-source-code").href = random_code.src;
+  document.getElementById("random-source-code-lang").innerHTML = "LANGUAGE: " + random_code.language;
+
+  // Create an iframe, append it to this document where specified
+  var gist_iframe = document.createElement("iframe");
+  gist_iframe.setAttribute("width", "100%");
+  gist_iframe.id = "gist_iframe";
+  
+  // Thanks goes to Jeremiah Lee for implementation of dynamic gist embedding: https://github.com/jeremiahlee
+  // See the gist: https://gist.github.com/jeremiahlee/1748966
+  var gist_iframe_div = document.getElementById("gist_iframe_div");
+  gist_iframe_div.innerHTML = "";
+  gist_iframe_div.appendChild(gist_iframe);
+  
+  // Create the iframe's document
+  var gist_iframe_html = `<html><body onload="parent.set_iframe_size(document.body.scrollHeight);"><script type="text/javascript" src="https://gist.github.com/Rabios/49efa3c4a9c54f83a7e75a6620d9cd74.js?file=${random_code.file}"></script></body></html>`;
+  
+  // Set iframe's document with a trigger for this document to adjust the height
+  var gist_iframe_doc = gist_iframe.document;
+  
+  if (gist_iframe.contentDocument) {
+    gist_iframe_doc = gist_iframe.contentDocument;
+  } else if (gist_iframe.contentWindow) {
+    gist_iframe_doc = gist_iframe.contentWindow.document;
+  }
+  
+  gist_iframe_doc.open();
+  gist_iframe_doc.writeln(gist_iframe_html);
+  gist_iframe_doc.close();
+}
+
+function set_iframe_size(h) {
+  var i = document.getElementById("gist_iframe");
+  i.style.height = parseInt(h) + "px";
 }

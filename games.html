@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
     <head>
         <title>steria773 - Games</title>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="style.css" rel="stylesheet">
+        <link href="fonts.css" rel="stylesheet">
         <link href="images/b1fd3038e0a7c3f9a8c1d16249b85d6000.png" type="image/png" rel="icon">
     </head>
-    <body>
+    <body onload="game_info(games_list.length - 1);">
         <script src="bubbly-bg.js"></script>
         <script src="script.js"></script>
-        <div style="background-color: purple; margin: 8px; padding: 8px; border-radius: 30px;">
-            <a href="index.html" style="font-family: 'pixelated'; color: white; font-size: 32px; margin: 8px;"><img src="images/b1fd3038e0a7c3f9a8c1d16249b85d60.png" align="center" width="96" height="96" style="padding: 8px; margin: 8px;"></a>
+        
+        <div id="banner" style="background-color: purple; margin: 8px; padding: 8px; border-radius: 30px;">
+            <a href="index.html" style="font-family: 'pixelated'; color: white; font-size: 32px; margin: 8px;"><img src="images/b1fd3038e0a7c3f9a8c1d16249b85d60.png" align="center" width="96" height="96" style="border-radius: 30px; padding: 8px; margin: 8px;"></a>
             <a href="index.html" style="font-family: 'pixelated'; color: white; font-size: 32px; margin: 8px;">STERIA773</a>
             <a href="projects.html" style="font-family: 'pixelated'; color: white; font-size: 32px; margin: 8px;"><button style="background-color: purple; border: 2px purple solid; font-family: 'pixelated'; height: 100px; color: white; font-size: 22px;">PROJECTS</button></a>
             <a href="games.html" style="font-family: 'pixelated'; color: white; font-size: 32px; margin: 8px;"><button style="background-color: purple; border: 2px purple solid; font-family: 'pixelated'; height: 100px; color: white; font-size: 22px;">GAMES</button></a>
@@ -19,8 +21,22 @@
         </div>
 
         <div style="background-color: blueviolet; margin: 8px; padding: 8px; border-radius: 30px;">
-            <p style="color: white; font-family: 'pixelated'; padding: 8px; font-size: 22px;" align="center">Here is some of my games (Click on image for game page)</p>
-            <a href="https://github.com/Rabios/Tyrius"><img src="images/tyrius.png" style="width: 50%;"></a><a href="https://rabios.itch.io/lines"><img src="images/lines.png" style="width: 50%;"></a><a href="https://github.com/Rabios/raytaiko"><img src="images/raytaiko.png" style="width: 50%; height: 50%;"></a><a href="https://github.com/Rabios/TARGET"><img src="images/target.png" style="width: 50%;"></a><a href="https://github.com/Rabios/ICECREAMBOY"><img src="images/icecreamboy.png" style="width: 50%;"></a><a href="https://rabios.github.io/opensenet"><img src="images/opensenet.png" style="width: 50%;"></a><a href="https://rabios.itch.io/cakestack"><img src="images/cakestack.png" style="width: 50%;"></a>
+            <p style="color: white; font-family: 'pixelated'; padding: 8px; margin: 8px; font-size: 48px; text-align: center;">GAMES</p><hr style="color: white; margin: 8px;"><br>
+            
+            <a id="game_link" style="visibility: hidden;" href=""><img id="game_image" src="" style="visibility: visible; float: left; padding: 30px; width: 50%;"></a>
+            <a id="game_source_link"><img src="images/GitHub-Mark-64px.png" style="float: right; padding: 8px;"></a>
+            <a id="game_itchio_link"><img src="images/itchio-textless-black.svg" style="float: right; padding: 8px; width: 5.2%; height: 5.2%;"></a>
+            <p id="game_name" style="color: white; font-family: 'pixelated'; padding: 8px; margin: 8px; font-size: 48px;"></p>
+            <p id="game_genre" style="color: white; font-family: 'pixelated'; padding: 8px; margin: 8px; font-size: 18px;"></p>
+            <p id="game_platforms" style="color: white; font-family: 'pixelated'; padding: 8px; margin: 8px; font-size: 18px;"></p>
+            <p id="game_engine" style="color: white; font-family: 'pixelated'; padding: 8px; margin: 8px; font-size: 18px;"></p>
+            <p id="game_prog_langs" style="color: white; font-family: 'pixelated'; padding: 8px; margin: 8px; font-size: 18px;"></p>
+            <p id="game_team" style="color: white; font-family: 'pixelated'; padding: 8px; margin: 8px; font-size: 18px;"></p>
+            <p id="game_release_date" style="color: white; font-family: 'pixelated'; padding: 8px; margin: 8px; font-size: 18px;"></p>
+            <br><br><p id="game_description" style="color: white; font-family: 'pixelated'; padding: 30px; margin: 30x; font-size: 22px;"></p>
+
+            <button onclick="previous_game()" style="border-radius: 30px; background-color: blueviolet; float: left; font-family: 'pixelated'; color: white; font-size: 32px; margin: 8px;"><< PREVIOUS</button>
+            <button onclick="next_game()" style="border-radius: 30px; background-color: blueviolet; float: right; font-family: 'pixelated'; color: white; font-size: 32px; margin: 8px;">NEXT >></button>
         </div>
     </body>
 </html>

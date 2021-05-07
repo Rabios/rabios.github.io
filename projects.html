@@ -1,46 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
     <head>
         <title>steria773 - Projects</title>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="style.css" rel="stylesheet">
+        <link href="fonts.css" rel="stylesheet">
         <link href="images/b1fd3038e0a7c3f9a8c1d16249b85d6000.png" type="image/png" rel="icon">
     </head>
-    <body>
+    <body onload="load_projects_list();">
         <script src="bubbly-bg.js"></script>
         <script src="script.js"></script>
+
         <div id="banner" style="background-color: purple; margin: 8px; padding: 8px; border-radius: 30px;">
-            <a href="index.html" style="font-family: 'pixelated'; color: white; font-size: 32px; margin: 8px;"><img src="images/b1fd3038e0a7c3f9a8c1d16249b85d60.png" align="center" width="96" height="96" style="padding: 8px; margin: 8px;"></a>
+            <a href="index.html" style="font-family: 'pixelated'; color: white; font-size: 32px; margin: 8px;"><img src="images/b1fd3038e0a7c3f9a8c1d16249b85d60.png" align="center" width="96" height="96" style="border-radius: 30px; padding: 8px; margin: 8px;"></a>
             <a href="index.html" style="font-family: 'pixelated'; color: white; font-size: 32px; margin: 8px;">STERIA773</a>
             <a href="projects.html" style="font-family: 'pixelated'; color: white; font-size: 32px; margin: 8px;"><button style="background-color: purple; border: 2px purple solid; font-family: 'pixelated'; height: 100px; color: white; font-size: 22px;">PROJECTS</button></a>
             <a href="games.html" style="font-family: 'pixelated'; color: white; font-size: 32px; margin: 8px;"><button style="background-color: purple; border: 2px purple solid; font-family: 'pixelated'; height: 100px; color: white; font-size: 22px;">GAMES</button></a>
             <a href="blog.html" style="font-family: 'pixelated'; color: white; font-size: 32px; margin: 8px;"><button style="background-color: purple; border: 2px purple solid; font-family: 'pixelated'; height: 100px; color: white; font-size: 22px;">BLOG</button></a>
             <a href="about.html" style="font-family: 'pixelated'; color: white; font-size: 32px; margin: 8px;"><button style="background-color: purple; border: 2px purple solid; font-family: 'pixelated'; height: 100px; color: white; font-size: 22px;">MORE</button></a>
         </div>
-
-        <div style="background-color: palevioletred; margin: 8px; padding: 8px; border-radius: 30px;">
-            <p style="color: white; font-family: 'pixelated'; padding: 8px; font-size: 22px;" align="center">Here is some of my projects (Click on image for info)</p>
-            <div align="center">
-                <img src="images/rayport.png" width="96" height="96" style="margin: 8px; padding: 8px;" onclick="project_info(0);">
-                <img src="images/raylua.png" width="96" height="96" style="margin: 8px; padding: 8px;" onclick="project_info(1);">
-                <!--<img src="images/crosskit_logo_new.png" width="96" height="96" style="margin: 8px; padding: 8px;" onclick="project_info(2);">-->
-                <img src="images/pancake.png" width="96" height="96" style="margin: 8px; padding: 8px;" onclick="project_info(5);">
-                <img src="images/clua_logo.png" width="96" height="96" style="margin: 8px; padding: 8px;" onclick="project_info(3);">
-                <img src="images/steria773_archive.png" width="96" height="96" style="margin: 8px; padding: 8px;" onclick="project_info(4);">
+        
+        <div style="background-color: blueviolet; margin: 8px; padding: 8px; border-radius: 30px;">
+            <p style="color: white; font-family: 'pixelated'; padding: 8px; margin: 8px; font-size: 48px; text-align: center;">PROJECTS</p><hr style="color: white; margin: 8px;"><br>
+            <div id="projlist">
+                <table id="proj_table">
+                    <tbody id="kuro">
+                        <tr>
+                            <td style="color: magenta; font-family: 'pixelated'; padding: 8px; font-size: 26px;">PROJECT</td>
+                            <td style="color: magenta; font-family: 'pixelated'; padding: 8px; font-size: 26px;">DESCRIPTION</td>
+                            <td style="color: magenta; font-family: 'pixelated'; padding: 8px; font-size: 26px;">LANGUAGES</td>
+                            <td style="color: magenta; font-family: 'pixelated'; padding: 8px; font-size: 26px;">LINK</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-
-        <div id="projects" style="background-color: plum; margin: 8px; padding: 8px; border-radius: 30px; visibility: hidden;">
-            <p id="name" style="color: white; font-family: 'pixelated'; padding: 8px; font-size: 36px;" align="center"></p>
-            <p id="description" style="color: white; font-family: 'pixelated'; padding: 8px; font-size: 22px;" align="center"></p>
-            <p style="color: white; font-family: 'pixelated'; padding: 8px; font-size: 22px;" align="center"><a href="" id="url"></a></p>
-        </div>
-
-        <div style="background-color: pink; margin: 8px; padding: 8px; border-radius: 30px;">
-            <p style="color: white; font-family: 'pixelated'; padding: 8px; font-size: 22px;" align="center">
-                You can find all my projects and works (Including games) <a href="https://github.com/Rabios?tab=repositories">here!</a>
-            </p>
-        </div>
-        
     </body>
 </html>
