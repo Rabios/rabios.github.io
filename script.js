@@ -8,10 +8,16 @@ bubbly({
 
 var projects_list = [
   {
+    name: "Lancelot",
+    description: "Open-Source Game Launcher written in Ruby via DragonRuby GTK",
+    url: "https://github.com/Rabios/Lancelot",
+    languages: [ "Ruby", "Batchscript", "Bash", "Powershell" ]
+  },
+  {
     name: "ice_libs",
     description: "Collection of cross-platform single-header C libraries for doing a lot of stuff! (Still WIP)",
     url: "https://github.com/Rabios/ice_libs",
-    languages: [ "ANSI C, C++, Objective-C" ]
+    languages: [ "ANSI C", "C++", "Objective-C" ]
   },
   {
     name: "awesome-raylib",
@@ -611,6 +617,56 @@ var codes = [
     file: "take_screenshot.rb",
     language: "Python",
     src: "https://github.com/Rabios/luckpaint/blob/main/app/main.rb#L158"
+  },
+  {
+    file: "locate_drives.rb",
+    language: "Ruby",
+    src: "https://github.com/Rabios/Lancelot/blob/main/app/main.rb#L243"
+  },
+  {
+    file: "is_executable.rb",
+    language: "Ruby",
+    src: "https://github.com/Rabios/Lancelot/blob/main/app/main.rb#L265"
+  },
+  {
+    file: "is_image.rb",
+    language: "Ruby",
+    src: "https://github.com/Rabios/Lancelot/blob/main/app/main.rb#L291"
+  },
+  {
+    file: "num_str.rb",
+    language: "Ruby",
+    src: "https://github.com/Rabios/Lancelot/blob/main/app/main.rb#L322"
+  },
+  {
+    file: "process_running.rb",
+    language: "Ruby",
+    src: "https://github.com/Rabios/Lancelot/blob/main/app/main.rb#L338"
+  },
+  {
+    file: "root_dir.rb",
+    language: "Ruby",
+    src: "https://github.com/Rabios/Lancelot/blob/main/app/main.rb#L347"
+  },
+  {
+    file: "count_dir_slashes.rb",
+    language: "Ruby",
+    src: "https://github.com/Rabios/Lancelot/blob/main/app/main.rb#L357"
+  },
+  {
+    file: "filename.rb",
+    language: "Ruby",
+    src: "https://github.com/Rabios/Lancelot/blob/main/app/main.rb#L389"
+  },
+  {
+    file: "fetch_dir.rb",
+    language: "Ruby",
+    src: "https://github.com/Rabios/Lancelot/blob/main/app/main.rb#L417"
+  },
+  {
+    file: "secs_to_str.rb",
+    language: "Ruby",
+    src: "https://github.com/Rabios/Lancelot/blob/main/app/main.rb#L220"
   }
 ];
 
