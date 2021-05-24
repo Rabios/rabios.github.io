@@ -327,12 +327,17 @@ var game_index = 0;
 function game_info(i) {
   if (game_image) {
     document.getElementById("game_image").src = games_list[i].image;
+    document.getElementById("game_image").style.visibility = "hidden";
+    document.getElementById("game_image").onload = function() {
+      document.getElementById("game_image").style.visibility = "visible";
+    };
   } else {
     var game_image = document.createElement("img");
     game_image.id = "game_image";
     game_image.style.width = "50%";
     game_image.style.padding = "20px";
     game_image.style.float = "left";
+    game_image.style.visibility = "hidden";
     
     document.getElementById("game_link").parentNode.appendChild(game_image);
   }
@@ -343,6 +348,10 @@ function game_info(i) {
   document.getElementById("game_itchio_link").href = games_list[i].link[0];
   document.getElementById("game_genre").innerHTML = "GENRES: " + arr_comp(games_list[i].genres);
   document.getElementById("game_image").src = games_list[i].image;
+  document.getElementById("game_image").style.visibility = "hidden";
+  document.getElementById("game_image").onload = function() {
+    document.getElementById("game_image").style.visibility = "visible";
+  };
   document.getElementById("game_platforms").innerHTML = "PLATFORMS: " + arr_comp(games_list[i].platforms);
   document.getElementById("game_engine").innerHTML = "ENGINE/FRAMEWORK/LIBRARY: " + games_list[i].engine;
   document.getElementById("game_prog_langs").innerHTML = "PROGRAMMING LANGUAGES: " + arr_comp(games_list[i].programming_languages);
