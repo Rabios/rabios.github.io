@@ -276,7 +276,7 @@ var games_list = [
     engine_link: "https://dragonruby.org/toolkit/game",
     programming_languages: [ "Ruby" ],
     team: [ "Rabia Alhaffar (Me)" ],
-    release_date: "June 4, 2021",
+    release_date: "June 1, 2021",
     description: "Roguelike shooter tower-defense-like Arcade game where you defend your ship and shoot asteroids with challenging difficulty!"
   },
 ];
