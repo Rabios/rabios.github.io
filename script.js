@@ -8,6 +8,12 @@ bubbly({
 
 var projects_list = [
   {
+    name: "drtouch",
+    description: "Touch input library written in Ruby for DragonRuby GTK Pro",
+    url: "https://github.com/Rabios/drtouch",
+    languages: [ "Ruby" ]
+  },
+  {
     name: "Lancelot",
     description: "Open-Source Game Launcher written in Ruby via DragonRuby GTK",
     url: "https://github.com/Rabios/Lancelot",
@@ -69,7 +75,7 @@ var projects_list = [
   },
   {
     name: "polyfill.lua",
-    description: "Polyfills for Lua and LuaJIT in one file, Improvement of CLua.",
+    description: "Polyfills for Lua and LuaJIT in one file, Improvement of CLua",
     url: "https://github.com/Rabios/polyfill.lua",
     languages: [ "Lua (LuaJIT)" ]
   },
@@ -87,13 +93,13 @@ var projects_list = [
   },
   {
     name: "Pancake.hx",
-    description: "Haxe port of the awesome HTML5 game framework Pancake! ",
+    description: "Haxe port of the awesome HTML5 game framework Pancake!",
     url: "https://github.com/Rabios/Pancake.hx",
     languages: [ "Haxe" ]
   },
   {
     name: "rayport",
-    description: "Header-Only rayfork wrapper for raylib! ",
+    description: "Header-Only rayfork wrapper for raylib!",
     url: "https://github.com/Rabios/rayport",
     languages: [ "C99" ]
   },
@@ -147,37 +153,37 @@ var projects_list = [
   },
   {
     name: "Tyrius",
-    description: "My experiment of creating 3D FPS game in C with raylib, Still prototype but playable.",
+    description: "My experiment of creating 3D FPS game prototype in C with raylib",
     url: "https://github.com/Rabios/Tyrius",
     languages: [ "C99" ]
   },
   {
     name: "LINES-PORTS",
-    description: "Linux, Web and Mobile ports of LINES game.",
+    description: "Linux, Web and Mobile ports of LINES game",
     url: "https://github.com/Rabios/LINES-PORTS",
     languages: [ "Lua (LuaJIT)", "JavaScript" ]
   },
   {
     name: "cherry-test",
-    description: "Test for the LuaJIT package manager cherry.",
+    description: "Test for the LuaJIT package manager cherry",
     url: "https://github.com/Rabios/cherry-test",
     languages: [ "Lua (LuaJIT)" ]
   },
   {
     name: "load.js",
-    description: "Tiny JavaScript library to load external JavaScript files (scripts) or libraries.",
+    description: "Tiny JavaScript library to load external JavaScript files (scripts) or libraries",
     url: "https://github.com/steria773-archive/load.js",
     languages: [ "JavaScript" ]
   },
   {
     name: "ICECREAMBOY",
-    description: "Simple icecream game sample made with raylua.",
+    description: "Simple icecream game sample made with raylua",
     url: "https://github.com/steria773-archive/ICECREAMBOY",
     languages: [ "Lua (LuaJIT)" ]
   },
   {
     name: "Lotus",
-    description: "Simple Lua and MoonScript IDE aimed towards software and game development and also for basic needs.",
+    description: "Simple Lua and MoonScript IDE aimed towards software and game development and also for basic needs",
     url: "https://github.com/steria773-archive/Lotus",
     languages: [ "Python", "Batchscript" ]
   },
