@@ -232,9 +232,9 @@ var games_list = [
     link: [ "https://rabios.itch.io/opensenet", "https://github.com/Rabios/OpenSenet" ],
     image: "images/opensenet.png",
     genres: [ "Board", "Strategy" ],
-    platforms: [ "Desktop", "Web" ],
+    platforms: [ "Desktop", "Android", "Web" ],
     engine: "DragonRuby GTK",
-    engine_link: "https://dragonruby.org",
+    engine_link: "https://dragonruby.org/toolkit/game",
     programming_languages: [ "Ruby" ],
     team: [ "Rabia Alhaffar (Me)" ],
     release_date: "November 13, 2020",
@@ -247,7 +247,7 @@ var games_list = [
     genres: [ "Arcade", "Casual" ],
     platforms: [ "Desktop", "Android", "Web" ],
     engine: "DragonRuby GTK",
-    engine_link: "https://dragonruby.org",
+    engine_link: "https://dragonruby.org/toolkit/game",
     programming_languages: [ "Ruby" ],
     team: [ "Rabia Alhaffar (Me)" ],
     release_date: "November 14, 2020",
@@ -258,14 +258,27 @@ var games_list = [
     link: [ "https://rabios.itch.io/luckpaint", "https://github.com/Rabios/luckpaint" ],
     image: "images/luckpaint.png",
     genres: [ "Casual" ],
-    platforms: [ "Desktop", "Web" ],
+    platforms: [ "Desktop", "Android", "Web" ],
     engine: "DragonRuby GTK",
-    engine_link: "https://dragonruby.org",
+    engine_link: "https://dragonruby.org/toolkit/game",
     programming_languages: [ "Ruby" ],
     team: [ "Rabia Alhaffar (Me)" ],
     release_date: "May 6, 2021",
     description: "8x8 Hybrid pixel art painting game i tried to make in 48 hours just for Juicy Jam #1"
-  }
+  },
+  {
+    name: "BLACKVOID",
+    link: [ "https://rabios.itch.io/blackvoid", "https://github.com/Rabios/BLACKVOID" ],
+    image: "images/BLACKVOID.png",
+    genres: [ "Action", "Arcade", "Tower-Defense" ],
+    platforms: [ "Desktop", "Android", "Web" ],
+    engine: "DragonRuby GTK",
+    engine_link: "https://dragonruby.org/toolkit/game",
+    programming_languages: [ "Ruby" ],
+    team: [ "Rabia Alhaffar (Me)" ],
+    release_date: "June 4, 2021",
+    description: "Roguelike shooter tower-defense-like Arcade game where you defend your ship and shoot asteroids with challenging difficulty!"
+  },
 ];
 
 function arr_comp(strarr) {
