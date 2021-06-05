@@ -9,7 +9,7 @@ bubbly({
 var projects_list = [
   {
     name: "drtouch",
-    description: "Touch input library written in Ruby for DragonRuby GTK Pro",
+    description: "Touch input library written in Ruby for DragonRuby GTK!",
     url: "https://github.com/Rabios/drtouch",
     languages: [ "Ruby" ]
   },
