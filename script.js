@@ -71,7 +71,7 @@ var projects_list = [
     name: "rayutils",
     description: "Single-Header library that extends raylib with some functionality!",
     url: "https://github.com/Rabios/rayutils",
-    languages: [ "C" ]
+    languages: [ "C99" ]
   },
   {
     name: "cherry",
