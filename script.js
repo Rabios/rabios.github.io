@@ -8,6 +8,12 @@ bubbly({
 
 var projects_list = [
   {
+    name: "sigil-bindings",
+    description: "Bindings of SIGIL library for Boo, Lua, Nim, FreePascal, and FreeBASIC!",
+    url: "https://github.com/Rabios/sigil-bindings",
+    languages: [ "Boo", "Lua (LuaJIT)", "Nim", "FreePascal", "FreeBASIC" ]
+  },
+  {
     name: "drtouch",
     description: "Touch input library written in Ruby for DragonRuby GTK!",
     url: "https://github.com/Rabios/drtouch",
