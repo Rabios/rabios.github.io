@@ -8,6 +8,12 @@ bubbly({
 
 var projects_list = [
   {
+    name: "hxwebos",
+    description: "Haxe externs for webOSTV JavaScript library!",
+    url: "https://github.com/Rabios/hxwebos",
+    languages: [ "Haxe" ]
+  },
+  {
     name: "sigil-bindings",
     description: "Bindings of SIGIL library for Boo, Lua, Nim, FreePascal, and FreeBASIC!",
     url: "https://github.com/Rabios/sigil-bindings",
