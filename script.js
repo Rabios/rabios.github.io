@@ -8,6 +8,12 @@ bubbly({
 
 var projects_list = [
   {
+    name: "hxtizen",
+    description: "Haxe externs for Tizen SDK APIs!",
+    url: "https://github.com/Rabios/hxtizen",
+    languages: [ "Haxe" ]
+  },
+  {
     name: "hxwebos",
     description: "Haxe externs for webOSTV JavaScript library!",
     url: "https://github.com/Rabios/hxwebos",
