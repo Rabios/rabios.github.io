@@ -8,6 +8,18 @@ bubbly({
 
 var projects_list = [
   {
+    name: "Orange.hx",
+    description: "Collection of Haxe stuff for folks!",
+    url: "https://github.com/Orange-hx",
+    languages: [ "Haxe" ]
+  },
+  {
+    name: "steria773-archive",
+    description: "Archive of my old stuff...",
+    url: "https://github.com/steria773-archive",
+    languages: [ "Python", "Lua", "JavaScript" ]
+  },
+  {
     name: "hxtizen",
     description: "Haxe externs for Tizen SDK APIs!",
     url: "https://github.com/Rabios/hxtizen",
@@ -234,7 +246,7 @@ var projects_list = [
     description: "Yes you guessed, It's the website's source code!",
     url: "https://github.com/Rabios/rabios.github.io",
     languages: [ "HTML", "CSS", "JavaScript" ]
-  },
+  }
 ];
 
 var games_list = [
