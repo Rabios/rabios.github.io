@@ -20,6 +20,18 @@ var projects_list = [
     languages: [ "Python", "Lua", "JavaScript" ]
   },
   {
+    name: "blockly-nelua",
+    description: "Blockly that generates Nelua!",
+    url: "https://github.com/Rabios/blockly-nelua",
+    languages: [ "JavaScript", "Nelua" ]
+  },
+  {
+    name: "sigil_loader",
+    description: "Loader for SIGIL library to use with C for no compilation hassle!",
+    url: "https://github.com/Rabios/sigil_loader",
+    languages: [ "ANSI C" ]
+  },
+  {
     name: "hxtizen",
     description: "Haxe externs for Tizen SDK APIs!",
     url: "https://github.com/Rabios/hxtizen",
