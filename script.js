@@ -20,10 +20,16 @@ var projects_list = [
     languages: [ "Python", "Lua", "JavaScript" ]
   },
   {
+    name: "dragonblocks",
+    description: "Blockly for DragonRuby!",
+    url: "https://github.com/Rabios/dragonblocks",
+    languages: [ "JavaScript", "XML", "JSON", "Ruby" ]
+  },
+  {
     name: "blockly-nelua",
     description: "Blockly that generates Nelua!",
     url: "https://github.com/Rabios/blockly-nelua",
-    languages: [ "JavaScript", "Nelua" ]
+    languages: [ "JavaScript", "JSON", "Nelua" ]
   },
   {
     name: "sigil_loader",
