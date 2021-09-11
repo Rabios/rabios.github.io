@@ -20,6 +20,18 @@ var projects_list = [
     languages: [ "Python", "Lua", "JavaScript" ]
   },
   {
+    name: "drkbd",
+    description: "On-Screen Keyboard for DragonRuby!",
+    url: "https://github.com/Rabios/drkbd",
+    languages: [ "Ruby" ]
+  },
+  {
+    name: "cololinks-docs",
+    description: "Docs for my game COLOLINKS!",
+    url: "https://github.com/Rabios/cololinks-docs",
+    languages: [ "Markdown" ]
+  },
+  {
     name: "dragonblocks",
     description: "Blockly for DragonRuby!",
     url: "https://github.com/Rabios/dragonblocks",
@@ -333,6 +345,19 @@ var games_list = [
     release_date: "June 1, 2021",
     description: "Roguelike shooter tower-defense-like Arcade game where you defend your ship and shoot asteroids with challenging difficulty!"
   },
+  {
+    name: "COLOLINKS!",
+    link: [ "https://rabios.itch.io/cololinks", "https://github.com/Rabios/cololinks-docs" ],
+    image: "images/cololinks.png",
+    genres: [ "Puzzle", "Match", "Arcade", "Casual" ],
+    platforms: [ "Desktop" ],
+    engine: "DragonRuby GTK",
+    engine_link: "https://dragonruby.org/toolkit/game",
+    programming_languages: [ "Ruby" ],
+    team: [ "Rabia Alhaffar (Me)" ],
+    release_date: "September 2, 2021",
+    description: "Matching game which is mix of Two Dots/Dots mechanics with some of Candy Crush!"
+  }
 ];
 
 function arr_comp(strarr) {
