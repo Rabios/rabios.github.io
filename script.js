@@ -20,6 +20,12 @@ var projects_list = [
     languages: [ "Python", "Lua", "JavaScript" ]
   },
   {
+    name: "nelua-fun",
+    description: "Collection of stuff made for Nelua!",
+    url: "https://github.com/Rabios/nelua-fun",
+    languages: [ "Nelua" ]
+  },
+  {
     name: "drkbd",
     description: "On-Screen Keyboard for DragonRuby!",
     url: "https://github.com/Rabios/drkbd",
