@@ -366,6 +366,59 @@ var games_list = [
   }
 ];
 
+var contributions_list = [
+  {
+    name: "raylib",
+    url: "https://raylib.com",
+    works: "Bindings (Lua, Boo, JavaScript), awesome-raylib, rayutils, rayport"
+  },
+  {
+    name: "ChaiLove",
+    url: "https://github.com/libretro/ChaiLove",
+    works: "chailove-examples-collection"
+  },
+  {
+    name: "LOVR",
+    url: "https://lovr.org",
+    works: "Joystick and Clipboard support, Bindings for Haxe"
+  },
+  {
+    name: "Dlang Tour",
+    url: "https://github.com/dlang-tour",
+    works: "Arabic translation of the tour (Temporarily Halted)"
+  },
+  {
+    name: "Wax",
+    url: "https://github.com/LingDong-/wax",
+    works: "Added transpilers for some programming languages"
+  },
+  {
+    name: "Physac",
+    url: "https://github.com/victorfisac/Physac",
+    works: "Fixes"
+  },
+  {
+    name: "SIGIL",
+    url: "http://www.libsigil.com",
+    works: "Bindings (Nim, Boo, Lua, FreePascal, FreeBASIC, Nelua), sigil-loader"
+  },
+  {
+    name: "Nelua",
+    url: "https://nelua.io",
+    works: "Extended platform detection, FFI module, nelua-fun, blockly-nelua"
+  },
+  {
+    name: "FWK",
+    url: "https://github.com/r-lyeh/FWK",
+    works: "Bindings for Nelua"
+  },
+  {
+    name: "DragonRuby",
+    url: "https://dragonruby.org",
+    works: "DragonBlocks, drkbd, drtouch"
+  }
+];
+
 function arr_comp(strarr) {
   var res = "";
 
@@ -380,43 +433,60 @@ function arr_comp(strarr) {
 function load_projects_list() {
   for (var i = 0; i < projects_list.length; i++) {
     var tr = document.createElement("tr");
-    
-    var td1 = document.createElement("td");
-    td1.style.color = "white";
-    td1.style.fontFamily = "pixelated";
-    td1.style.padding = "8px";
-    td1.style.fontSize = "18px";
-    td1.innerHTML = projects_list[i].name;
 
-    var td2 = document.createElement("td");
-    td2.style.color = "white";
-    td2.style.fontFamily = "pixelated";
-    td2.style.padding = "8px";
-    td2.style.fontSize = "18px";
-    td2.innerHTML = projects_list[i].description;
+    var tdl = [];
+    var vals = [ "name", "description", "languages", "url" ];
+
+    for (var j = 0; j < vals.length; j++) {
+      tdl.push(document.createElement("td"));
+      tdl[j].style.color = "white";
+      tdl[j].style.fontFamily = "pixelated";
+      tdl[j].style.padding = "8px";
+      tdl[j].style.fontSize = "18px";
+
+      if (j == 2) {
+        tdl[j].innerHTML = arr_comp(projects_list[i][vals[j]]);
+      } else if (j == 3) {
+        tdl[j].innerHTML = `<a href="${projects_list[i][vals[j]]}" style="padding: 8px;"><img src="images/GitHub-Mark-64px.png"></a>`;
+      } else {
+        tdl[j].innerHTML = projects_list[i][vals[j]];
+      }
+      
+      tr.appendChild(tdl[j]);
+    }
   
-    var td3 = document.createElement("td");
-    td3.style.color = "white";
-    td3.style.fontFamily = "pixelated";
-    td3.style.padding = "8px";
-    td3.style.fontSize = "18px";
-    td3.innerHTML = arr_comp(projects_list[i].languages);
-    
-    var td4 = document.createElement("td");
-    td4.style.color = "white";
-    td4.style.fontFamily = "pixelated";
-    td4.style.padding = "8px";
-    td4.style.fontSize = "18px";
-    td4.innerHTML = `<a href="${projects_list[i].url}" style="padding: 8px;"><img src="images/GitHub-Mark-64px.png"></a>`;
-
-    tr.appendChild(td1);
-    tr.appendChild(td2);
-    tr.appendChild(td3);
-    tr.appendChild(td4);
-    
     var br = document.createElement("br");
     document.getElementById("kuro").parentNode.appendChild(tr);
     document.getElementById("kuro").parentNode.appendChild(br);
+  }
+}
+
+function load_contrib_list() {
+  for (var i = 0; i < contributions_list.length; i++) {
+    var tr = document.createElement("tr");
+
+    var tdl = [];
+    var vals = [ "name", "works" ];
+
+    for (var j = 0; j < vals.length; j++) {
+      tdl.push(document.createElement("td"));
+      tdl[j].style.fontFamily = "pixelated";
+      tdl[j].style.padding = "8px";
+      tdl[j].style.fontSize = "18px";
+
+      if (j != 0) {
+        tdl[j].style.color = "white";
+        tdl[j].innerHTML = contributions_list[i][vals[j]];
+      } else {
+        tdl[j].style.color = "purple";
+        tdl[j].innerHTML = `<a href="${contributions_list[i].url}" style="padding: 8px;">${contributions_list[i].name}</a>`;
+      }
+      tr.appendChild(tdl[j]);
+    }
+  
+    var br = document.createElement("br");
+    document.getElementById("kuri").parentNode.appendChild(tr);
+    document.getElementById("kuri").parentNode.appendChild(br);
   }
 }
 

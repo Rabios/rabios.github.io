@@ -9,3 +9,15 @@
     font-family: "quicksand";
     src: url("quicksand.ttf");
 }
+
+a:active {
+    color: turquoise;
+}
+
+a:visited {
+    color: turquoise;
+}
+
+a:hover {
+    color: turquoise;
+}
