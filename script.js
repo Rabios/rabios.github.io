@@ -481,6 +481,7 @@ function load_contrib_list() {
         tdl[j].style.color = "purple";
         tdl[j].innerHTML = `<a href="${contributions_list[i].url}" style="padding: 8px;">${contributions_list[i].name}</a>`;
       }
+      
       tr.appendChild(tdl[j]);
     }
   
