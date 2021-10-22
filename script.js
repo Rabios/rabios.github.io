@@ -20,6 +20,12 @@ var projects_list = [
     languages: [ "Python", "Lua", "JavaScript" ]
   },
   {
+    name: "drext",
+    description: "Collection of C extensions made for DragonRuby!",
+    url: "https://github.com/Rabios/drext",
+    languages: [ "C", "Objective-C", "Ruby" ]
+  },
+  {
     name: "nelua-fun",
     description: "Collection of stuff made for Nelua!",
     url: "https://github.com/Rabios/nelua-fun",
@@ -356,7 +362,7 @@ var games_list = [
     link: [ "https://rabios.itch.io/cololinks", "https://github.com/Rabios/cololinks-docs" ],
     image: "images/cololinks.png",
     genres: [ "Puzzle", "Match", "Arcade", "Casual" ],
-    platforms: [ "Desktop" ],
+    platforms: [ "Desktop", "Android" ],
     engine: "DragonRuby GTK",
     engine_link: "https://dragonruby.org/toolkit/game",
     programming_languages: [ "Ruby" ],
